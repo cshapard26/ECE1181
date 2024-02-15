@@ -4,4 +4,4 @@
 
 # [Lab 4 Guide](guide)
 
-# [View Lab 4 Instructions](Lab4Instructions)
+# [View Lab 4 Instructions](Lab4Instructions.pdf)
