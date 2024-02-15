@@ -6,6 +6,9 @@ layout: labscreen
 **Instructions embedded at the bottom of this page for your convenience**<br>
 [Back to Homepage](..)
 
+---
+# Overview
+
 ## Organization: A way to gracefully manage your lab
 **Warning: Closing this page will clear your checkboxes**
 
