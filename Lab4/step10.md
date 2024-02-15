@@ -1,7 +1,7 @@
 ---
 layout: stepguide
 ---
-# Lab 4: Step 3
+# Lab 4: Step 10
 [Back to Lab 4 Guide](./guide.md) (Try and use the back arrow on your browser. Clicking this removes your checkmarks)
 
 ---
