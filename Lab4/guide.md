@@ -8,9 +8,17 @@ layout: labscreen
 [Back to Homepage](..)
 
 
+## Organization
+Here is an easy way to keep track of what you have completed.
+
+**Warning: Closing this page will clear your checkboxes**
+
 <input type="checkbox"> Step 1
+
 <input type="checkbox"> Step 2
+
 <input type="checkbox"> Step 3
+
 <input type="checkbox"> Step 4
 
 
