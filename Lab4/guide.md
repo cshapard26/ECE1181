@@ -9,9 +9,9 @@ layout: labscreen
 
 
 <input type="checkbox"> Step 1
-<input type="checkbox"> Step 1
-<input type="checkbox"> Step 1
-<input type="checkbox"> Step 1
+<input type="checkbox"> Step 2
+<input type="checkbox"> Step 3
+<input type="checkbox"> Step 4
 
 
 
