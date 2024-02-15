@@ -7,17 +7,5 @@ We have _tears_, we have __bugs__, we have ~~a crippling sense that all our effo
 
 ### Welcome to Microcontrollers and Embedded Systems!
 
-[0](Lab4)
-
-[1](Lab4/README.md)
-
-[2](Lab4/README)
-
-[3](/Lab4)
-
-[4](/Lab4/)
-
-[5](/Lab4/README)
-
-[6](/Lab4/README.md)
+[Lab 4](Lab4)
 
