@@ -7,12 +7,11 @@ layout: labscreen
 [Back to Homepage](..)
 t
 
-## Organization
-Here is an easy way to keep track of what you have completed.
+# Organization
+#### A way to gracefully manage your lab
+Warning: Closing this page will clear your checkboxes
 
-**Warning: Closing this page will clear your checkboxes**
-
-<input type="checkbox"> Step 1: <br>
+<input type="checkbox"> Step 1: Read through pages 87-91. (Please actually do this)<br>
 <input type="checkbox"> Step 2: <br>
 <input type="checkbox"> Step 3: <br>
 <input type="checkbox"> Step 4: <br>
@@ -31,7 +30,7 @@ Here is an easy way to keep track of what you have completed.
 <input type="checkbox"> Step 17: <br>
 
 
-## Instructions
+# Instructions
 <object data="Lab4Instructions.pdf" type="application/pdf" width="100%" height="700px">
     <embed src="Lab4Instructions.pdf">
         <p>This browser does not support PDFs. Please download the PDF to view it: <a href="Lab4Instructions.pdf">Download PDF</a>.</p>
