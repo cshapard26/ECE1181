@@ -7,10 +7,17 @@ We have _tears_, we have __bugs__, we have ~~a crippling sense that all our effo
 
 ### Welcome to Microcontrollers and Embedded Systems!
 
-[[Lab4|Test link]]
-[[Lab4/README.md|Test link 2]]
-[[Lab4/README|Test link 3]]
-[[/Lab4|Test link 4]]
-[[/Lab4/|Test link 5]]
-[[/Lab4/README|Test link 6]]
-[[/Lab4/README.md|Test link 7]]
+[[Lab4]]
+
+[[Lab4/README.md]]
+
+[[Lab4/README]]
+
+[[/Lab4]]
+
+[[/Lab4/]]
+
+[[/Lab4/README]]
+
+[[/Lab4/README.md]]
+
