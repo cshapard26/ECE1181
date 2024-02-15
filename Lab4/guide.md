@@ -8,7 +8,7 @@ layout: labscreen
 [Back to Homepage](..)
 
 
-- [ ] Step 1
+<input type="checkbox">Step 1</input>
 - [ ] Step 2
 - [ ] Step 3
 
