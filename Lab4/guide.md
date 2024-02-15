@@ -24,7 +24,7 @@ For a detailed explanation on each step, click the Step Number, which will redir
 <input type="checkbox"> Step 6: Check the content of register R1.<br>
 <input type="checkbox"> Step 7: Use the command `x /4ubfx ContentsOfR1` to check what is stored in the memory address held in R1. **After completing this step, take a screenshot showing the values stored at R1's memory address.** These should be in the reverse order of the values you had in the "mynumber" line because of Little Endianness.<br>
 <input type="checkbox"> Step 8: Step over the next line of code and make sure R2 contains the reverse of the value you saw in R1 (aka, the same order as "mynumber").<br>
-<input type="checkbox"> Step 9: <br>
+<input type="checkbox"> [Step 9](./step9.md): Change "mynumber" to your student ID in hexadecimal and disassemble your program. **After this step, take a screeenshot showing the disassembled code. In your lab report, note which memory addresses hold your student ID. <br>
 <input type="checkbox"> Step 10: <br>
 <input type="checkbox"> Step 11: <br>
 <input type="checkbox"> Step 12: <br>
