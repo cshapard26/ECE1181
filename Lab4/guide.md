@@ -13,13 +13,10 @@ Here is an easy way to keep track of what you have completed.
 
 **Warning: Closing this page will clear your checkboxes**
 
-<input type="checkbox"> Step 1
-
-<input type="checkbox"> Step 2
-
-<input type="checkbox"> Step 3
-
-<input type="checkbox"> Step 4
+<input type="checkbox"> Step 1<br>
+<input type="checkbox"> Step 2<br>
+<input type="checkbox"> Step 3<br>
+<input type="checkbox"> Step 4<br>
 
 ## Instructions
 <object data="Lab4Instructions.pdf" type="application/pdf" width="100%" height="700px">
