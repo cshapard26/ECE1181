@@ -3,7 +3,7 @@ layout: labscreen
 ---
 
 # Lab 4
-**Lab 4 Instructions embedded at the [bottom of this page](#Instructions) for your convenience**
+**Lab 4 Instructions embedded at the bottom of this page for your convenience**
 
 [Back to Homepage](..)
 
