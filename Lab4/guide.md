@@ -3,20 +3,33 @@ layout: labscreen
 ---
 
 # Lab 4
-**Lab 4 Instructions embedded at the bottom of this page for your convenience**
-
+**Instructions embedded at the bottom of this page for your convenience**<br>
 [Back to Homepage](..)
-
+t
 
 ## Organization
 Here is an easy way to keep track of what you have completed.
 
 **Warning: Closing this page will clear your checkboxes**
 
-<input type="checkbox"> Step 1<br>
-<input type="checkbox"> Step 2<br>
-<input type="checkbox"> Step 3<br>
-<input type="checkbox"> Step 4<br>
+<input type="checkbox"> Step 1: <br>
+<input type="checkbox"> Step 2: <br>
+<input type="checkbox"> Step 3: <br>
+<input type="checkbox"> Step 4: <br>
+<input type="checkbox"> Step 5: <br>
+<input type="checkbox"> Step 6: <br>
+<input type="checkbox"> Step 7: <br>
+<input type="checkbox"> Step 8: <br>
+<input type="checkbox"> Step 9: <br>
+<input type="checkbox"> Step 10: <br>
+<input type="checkbox"> Step 11: <br>
+<input type="checkbox"> Step 12: <br>
+<input type="checkbox"> Step 12: <br>
+<input type="checkbox"> Step 14: <br>
+<input type="checkbox"> Step 15: <br>
+<input type="checkbox"> Step 16: <br>
+<input type="checkbox"> Step 17: <br>
+
 
 ## Instructions
 <object data="Lab4Instructions.pdf" type="application/pdf" width="100%" height="700px">
