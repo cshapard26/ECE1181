@@ -11,7 +11,7 @@ layout: labscreen
 
 This is not a replacement for the lab instructions. Please only use this as mental scaffolding, as it's not meant to have comprehensive information on the topic.
 
-For a detailed explanation on each step, click the Step Number, which will redirect you to a page with the explanation. Your checkboxes should be preserved if you use the back arrow to return to this page, but you can also shift+click the links to open them in a new page.
+For a detailed explanation on each step, click the Step Number, which will redirect you to a page with the explanation. Your checkboxes should be preserved if you use the back arrow to return to this page, but you can also control+shift+click the links to open them in a new page.
 
 <input type="checkbox"> Step 1: Read through pages 87-91. (Please actually do this)<br>
 <input type="checkbox"> Step 2: Observe Table 5-3 and note how the B, SB, H, and SH letters affect the LDR instruction.<br>
