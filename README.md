@@ -6,3 +6,11 @@ Well, now you can!
 We have _tears_, we have __bugs__, we have ~~a crippling sense that all our effots are for nothing, and that in the end, no matter how hard we work or how much we do, we all still return to the same dust~~ lot's of fun!
 
 ### Welcome to Microcontrollers and Embedded Systems!
+
+[[Lab4|Test link]]
+[[Lab4/README.md|Test link 2]]
+[[Lab4/README|Test link 3]]
+[[/Lab4|Test link 4]]
+[[/Lab4/|Test link 5]]
+[[/Lab4/README|Test link 6]]
+[[/Lab4/README.md|Test link 7]]
