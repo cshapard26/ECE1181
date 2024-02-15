@@ -25,15 +25,20 @@ For a detailed explanation on each step, click the Step Number, which will redir
 <input type="checkbox"> Step 7: Use the command `x /4ubfx TheNumberYouFoundInR1` to check what is stored in the memory address held in R1. **After completing this step, take a screenshot showing the values stored at R1's memory address.** These should be in the reverse order of the values you had in the "mynumber" line because of Little Endianness.<br>
 <input type="checkbox"> Step 8: Step over the next line of code and make sure R2 contains the reverse of the value you saw in R1 (aka, the same order as "mynumber").<br>
 <input type="checkbox"> [Step 9](./step9.md): Change "mynumber" to your student ID in hexadecimal and disassemble your program. **After this step, take a screeenshot showing the disassembled code. In your lab report, note which memory addresses hold your student ID.** <br>
-<input type="checkbox"> [Step 10](./step10.md): Add the code listed in the instructions. NOTE: Read the changes carefully. Some ask you for a Byte and some ask for a Halfword.<br>
+<input type="checkbox"> [Step 10](./step10.md): Add the code listed in the instructions. NOTE: Read the changes carefully. Some ask you for a Byte and some ask for a Halfword. You will also need to add a few lines that reset the value of R1 to the address of "mynumber". **Take a screenshot of your code.**<br>
 <input type="checkbox"> Step 11: Run the code in the previous step. **Take a screenshot of each comparison (there should be 4 comparisons for this part)**. If you can't fit both examples in one screenshot, then that is okay. **Make sure to discuess the differences in your lab report.**<br>
 <input type="checkbox"> Step 12: Read the instructions to learn about storing values.<br>
 <input type="checkbox"> Step 13: Update the code based on the instructions (adding STR values), and remake the file. **Include a screenshot of the updated values at the effective address. In your lab report, be sure to discuss what happens.**  <br>
-<input type="checkbox"> Step 14: Change the code back to how it was before step 10 (I would comment out the lines using an @, because you will need to bring them back for step 15). Add the lines of code specified in the instructions (they should all be grouped together near the top). **Include a screenshot of your code. In your lab report, explain what the line** `STR R2, [R1]` **does.**<br>
-<input type="checkbox"> Step 15: <br>
-<input type="checkbox"> Step 16: <br>
-<input type="checkbox"> Step 17: <br>
+<input type="checkbox"> Step 14: Change the code back to how it was before step 10 (I would comment out the lines using an @, because you will need to bring them back for step 15). Add the lines of code specified in the instructions (they should all be grouped together near the top). **No screenshot is needed, but in your lab report, explain what the line** `STR R2, [R1]` **does.**<br>
+<input type="checkbox"> [Step 15](./step15.md): Update your code with the code listed in the instructions. If you commented out the lines in Step 14, you can put them back in (and update the LDR lines to STR). NOTE: Read the changes carefully. Some ask you for a Byte and some ask for a Halfword (It's different than step 10).<br> You will also need to add a few lines that reset the value of R1 to the address of "mynumber". **Take a screenshot of your code.**
+<input type="checkbox"> Step 16: Run the code in the previous step. **Take a screenshot of each comparison (there should be 4 comparisons for this part)**. If you can't fit both examples in one screenshot, then that is okay. **Make sure to discuess the differences in your lab report.**<br>
+<input type="checkbox"> Step 17: **In your lab report, explain why there is no signed STR instruction.**<br>
 
+## Conclusion
+- You should have a TON of screenshots. This lab requires the most screenshots by far.
+- I hope this lab helped you get a tactile understanding of how memory addressing works in real systems. It is something that will come up often in later labs.
+- If you have any more questions, specific or general, make sure to ask a TA.
+- If you have any suggestions for this site, email me at **[cshapard@smu.edu](mailto:cshapard@smu.edu).** I made this last night, so I couldn't include as much as I wanted to, but it will be better for next week's lab. Let me know what you want to see/what would help you most!
 
 # Instructions
 <object data="Lab4Instructions.pdf" type="application/pdf" width="100%" height="700px">
