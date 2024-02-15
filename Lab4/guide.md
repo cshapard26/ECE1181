@@ -20,10 +20,10 @@ For a detailed explanation on each step, click the Step Number, which will redir
 <input type="checkbox"> Step 2: Observe Table 5-3 and note how the B, SB, H, and SH letters affect the LDR instruction.<br>
 <input type="checkbox"> [Step 3](./step3.md): Read pages 95-96. "Wrap" the given code in the starting and ending code you have seen in previous labs. <br>
 <input type="checkbox"> [Step 4](./step4.md): Compile the code from Step 3.**After completing this step, take a screenshot of your code from Step 3 and the terminal showing that it compiles with no errors.**<br>
-<input type="checkbox"> Step 5: <br>
-<input type="checkbox"> Step 6: <br>
-<input type="checkbox"> Step 7: <br>
-<input type="checkbox"> Step 8: <br>
+<input type="checkbox"> Step 5: Run the debugger with your new code.<br>
+<input type="checkbox"> Step 6: Check the content of register R1.<br>
+<input type="checkbox"> Step 7: Use the command `x /4ubfx ContentsOfR1` to check what is stored in the memory address held in R1. **After completing this step, take a screenshot showing the values stored at R1's memory address.** These should be in the reverse order of the values you had in the "mynumber" line because of Little Endianness.<br>
+<input type="checkbox"> Step 8: Step over the next line of code and make sure R2 contains the reverse of the value you saw in R1 (aka, the same order as "mynumber").<br>
 <input type="checkbox"> Step 9: <br>
 <input type="checkbox"> Step 10: <br>
 <input type="checkbox"> Step 11: <br>
