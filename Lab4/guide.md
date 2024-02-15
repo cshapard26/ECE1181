@@ -5,7 +5,6 @@ layout: labscreen
 # Lab 4
 **Instructions embedded at the bottom of this page for your convenience**<br>
 [Back to Homepage](..)
-t
 
 # Organization
 #### A way to gracefully manage your lab
