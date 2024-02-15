@@ -16,7 +16,7 @@ For a detailed explanation on each step, click the Step Number, which will redir
 
 <input type="checkbox"> Step 1: Read through pages 87-91. (Please actually do this)<br>
 <input type="checkbox"> Step 2: Observe Table 5-3 and note how the B, SB, H, and SH letters affect the LDR instruction.<br>
-<input type="checkbox"> Step 3: <br>
+<input type="checkbox"> [Step 3](./step3.md): <br>
 <input type="checkbox"> Step 4: <br>
 <input type="checkbox"> Step 5: <br>
 <input type="checkbox"> Step 6: <br>
