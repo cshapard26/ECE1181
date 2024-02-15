@@ -8,11 +8,10 @@ layout: labscreen
 [Back to Homepage](..)
 
 
-<input type="checkbox">Step 1</input>
-- [ ] Step 2
-- [ ] Step 3
-
-- [ ] Step 4
+<input type="checkbox"> Step 1
+<input type="checkbox"> Step 1
+<input type="checkbox"> Step 1
+<input type="checkbox"> Step 1
 
 
 
