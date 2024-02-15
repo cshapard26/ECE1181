@@ -4,4 +4,4 @@
 
 # [Lab 4 Guide](guide)
 
-# [View Lab 4 Instructions](Lab4Instructions.pdf)
+# [Download Lab 4 Instructions](./Lab4Instructions.pdf)
