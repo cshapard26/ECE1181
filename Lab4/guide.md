@@ -18,8 +18,8 @@ For a detailed explanation on each step, click the Step Number, which will redir
 
 <input type="checkbox"> Step 1: Read through pages 87-91. (Please actually do this)<br>
 <input type="checkbox"> Step 2: Observe Table 5-3 and note how the B, SB, H, and SH letters affect the LDR instruction.<br>
-<input type="checkbox"> [Step 3](./step3.md): Read pages 95-96. "Wrap" the given code in the starting and ending code you have seen in previous labs. **Take a screenshot of your code after completing this step.**<br>
-<input type="checkbox"> Step 4: <br>
+<input type="checkbox"> [Step 3](./step3.md): Read pages 95-96. "Wrap" the given code in the starting and ending code you have seen in previous labs. <br>
+<input type="checkbox"> [Step 4](./step4.md): Compile the code from Step 3.**After completing this step, take a screenshot of your code from Step 3 and the terminal showing that it compiles with no errors.**<br>
 <input type="checkbox"> Step 5: <br>
 <input type="checkbox"> Step 6: <br>
 <input type="checkbox"> Step 7: <br>
