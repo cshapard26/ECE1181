@@ -1,5 +1,10 @@
 # Coop's Microcontroller Guide
 
+# You know the drill. [Here is Lab 5](https://www.coopshap.com/ECE1181/Lab5)
+
+
+
+<---
 ## Microcontrollers are hard.
 There's really no debate there. I'm a TA, and they still confuse me at times. But that doesn't mean that they're not worth learning.
 
@@ -14,4 +19,6 @@ In the meantime, check out my documentation for **[Lab 4](Lab4).** After working
 Also, odds are that you'll get a 404 page at some point since I made this last night and didn't account for any errors. The 404 page redirects here, so if you want a quick link back to lab 4:
 
 # [Here is a big ol' link to Lab 4](https://www.coopshap.com/ECE1181/Lab4)
+--->
+
 
