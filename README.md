@@ -4,7 +4,7 @@
 
 
 
-<---
+<!---
 ## Microcontrollers are hard.
 There's really no debate there. I'm a TA, and they still confuse me at times. But that doesn't mean that they're not worth learning.
 
