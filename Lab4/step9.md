@@ -14,4 +14,4 @@ So, if your student ID is "12345678", then it would be "0x12345678" in hex.
 Use the commands you have been using throughout this semester to "remake" the program. Make sure to include the `DEBUG=1` in the line `make -B DEBUG=1`!
 
 #### Disassemble the program
-I don't have my own Pitaya nor a copy of the book, and I don't remember the exact command. I believe you used it last lab, so check the book section from there. I believe it was something along the lines of `objdump YourFileName`, but fact check me on that. If you find it, let me know and I'll update this page for the other students.
+I talked with Will, and for this part, you <u>don't</u> need to use the `disassemble` or `objdump` commands. All you need to do is use the `x /4ubfx AddressInR1` command and take a screenshot showing your Student ID in reverse order in memory.
