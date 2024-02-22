@@ -2,6 +2,8 @@
 
 # You know the drill. [Here is Lab 5](https://www.coopshap.com/ECE1181/Lab5)
 
+[Here is Lab 4 if you still need it](https://www.coopshap.com/ECE1181/Lab4)
+
 
 
 <!---
