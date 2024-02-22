@@ -28,10 +28,10 @@ For a detailed explanation on each step, click the Step Number, which will redir
 <input type="checkbox"> [Step 9](./step9.md):  <br>
 <input type="checkbox"> Step 10: **Take a screenshot of your code**. In your lab report, explain what it does line-by-line. <br>
 <input type="checkbox"> Step 11: Test your program by running it without the debugger. You should input 4 tests: <br>
-        1. Your first initial of your first name in lowercase (which should print out your initial in UPPERCASE on the next line). <br>
-        2. Your first initial of your first name in UPPERCASE (which should print out your initial in lowercase on the next line). <br>
-        3. Your first initial of your last name in lowercase (which should print out your initial in UPPERCASE on the next line). <br>
-        4. Your first initial of your last name in UPPERCASE (which should print out your initial in lowercase on the next line). <br>
+> 1. Your first initial of your first name in lowercase (which should print out your initial in UPPERCASE on the next line). <br>
+> 2. Your first initial of your first name in UPPERCASE (which should print out your initial in lowercase on the next line). <br>
+> 3. Your first initial of your last name in lowercase (which should print out your initial in UPPERCASE on the next line). <br>
+> 4. Your first initial of your last name in UPPERCASE (which should print out your initial in lowercase on the next line). <br>
 
 
 
