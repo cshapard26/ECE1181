@@ -8,9 +8,7 @@ layout: labscreen
 
 ---
 # Overview
-
-
-
+Literal Pools and Logic are very important topics in ARM Assembly programming. In this lab, you will expereince first-hand how literal pools are handled by the Red Pitaya and how to implement conditional execution in your code. Before you begin, make sure to read over the introduction in the official instructions, as it will give you a broad view of what you will be implementing. As always, if you have questions, be sure to ask a TA.
 
 ## Organization: A way to gracefully manage your lab
 This is not a replacement for the lab instructions. Please only use this as mental scaffolding, as it's not meant to have comprehensive information on the topic.
@@ -38,7 +36,9 @@ For a detailed explanation on each step, click the Step Number, which will redir
 
 
 ## Conclusion
-- 
+- Hopefully, you now have a better understanding of how Literal Pools work within the ARM Processor. Though you likely won't come across the `pool needs to be closer` error during this semester, it is important to keep in mind why this happens for when you work with microcontrollers in the future.
+- You also implemented Conditional Execution for the first time in this lab. You will need to use this for most labs moving forward, and it's truly the first step towards industry level Assembly coding.
+- This is also the first lab where you are truly implementing a solution all on your own. This will be a recurring theme, so get used to writing your own ARM code!
 - If you have any more questions, specific or general, make sure to ask a TA.
 - If you have any suggestions for this site, email me at **[cshapard@smu.edu](mailto:cshapard@smu.edu).** I made this last night, so I couldn't include as much as I wanted to, but it will be better for next week's lab. Let me know what you want to see/what would help you most!
 
