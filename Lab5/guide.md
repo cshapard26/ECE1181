@@ -18,9 +18,10 @@ This is not a replacement for the lab instructions. Please only use this as ment
 For a detailed explanation on each step, click the Step Number, which will redirect you to a page with the explanation. Your checkboxes should be preserved if you use the back arrow to return to this page, but you can also control+shift+click the links to open them in a new page.
 
 <input type="checkbox"> Step 1: Read through pages 92-95. (Please actually do this)<br>
-<input type="checkbox"> [Step 2](./step2.md): Observe Table 5-3 and note how the B, SB, H, and SH letters affect the LDR instruction.<br>
-<input type="checkbox"> [Step 3](./step3.md): Read pages 95-96. "Wrap" the given code in the starting and ending code you have seen in previous labs. <br>
-<input type="checkbox"> [Step 4](./step4.md): Compile the code from Step 3.**After completing this step, take a screenshot of your code from Step 3 and the terminal showing that it compiles 
+<input type="checkbox"> [Step 2](./step2.md): Reuse your code from Lab 1 with a modern makefile, and use the `x /4ubfx addreddInR1` command to check the contents of the memory at the specified address. **Take a screenshot of the memory location**, and discuss the range of memory of the string in your lab report.<br>
+<input type="checkbox"> [Step 3](./step3.md): Add any number of Arbitrary Commands AFTER the last `SVC 0` statement, but BEFORE the `.data` section. Take note of the total number of bytes you are adding.<br>
+<input type="checkbox"> Step 4: Use the `make DEBUG=1` command again and check the new memory address of the `=helloworld` command. **Take a screenshot of the new location**. In your lab report, explain if the number of Arbitrary Commands you added lines up with the new location in memory.<br>
+<input type="checkbox"> [Step 5](./step5.md): Now, add a very large about of bytes in the same place as the Arbitrary Commands from earlier. You will need at least `4096 Bytes` to successfully get the error message described in the lab report. **Take a screenshot of the error message**, which will occur when you try and *make* the program. Describe in your lab report how you made this occur. <br>
 
 
 
