@@ -22,6 +22,17 @@ For a detailed explanation on each step, click the Step Number, which will redir
 <input type="checkbox"> [Step 3](./step3.md): Add any number of Arbitrary Commands AFTER the last `SVC 0` statement, but BEFORE the `.data` section. Take note of the total number of bytes you are adding.<br>
 <input type="checkbox"> Step 4: Use the `make DEBUG=1` command again and check the new memory address of the `=helloworld` command. **Take a screenshot of the new location**. In your lab report, explain if the number of Arbitrary Commands you added lines up with the new location in memory.<br>
 <input type="checkbox"> [Step 5](./step5.md): Now, add a very large about of bytes in the same place as the Arbitrary Commands from earlier. You will need at least `4096 Bytes` to successfully get the error message described in the lab report. **Take a screenshot of the error message**, which will occur when you try and *make* the program. Describe in your lab report how you made this occur. <br>
+<input type="checkbox"> Step 6: Create a new file called `inputASCII.s`, and fill it with the code in the Code Given section of the instructions. Be sure to update the `makefile` with the new file name. <br>
+<input type="checkbox"> Step 7: After using the `make` command, run the program. NOTE: you are NOT running the debugger for this step. You can run the program by entering `./inputASCII` into the terminal. The program then expects you to enter a character, so if it is not doing anything, just type a single letter in the terminal and click Enter. This should print out the same character that you just entered. <br>
+<input type="checkbox"> Step 8: You don't need to do anything for this step, but it tells you to be aware that when you are in the debugger, stepping over the first `SVC 0` command will prompt you for a character like in step 7. It may seem like an error, but just enter in the character and click enter, and it will move on to the next line in the debugger like you are used to. <br>
+<input type="checkbox"> [Step 9](./step9.md):  <br>
+<input type="checkbox"> Step 10: **Take a screenshot of your code**. In your lab report, explain what it does line-by-line. <br>
+<input type="checkbox"> Step 11: Test your program by running it without the debugger. You should input 4 tests: <br>
+        1. Your first initial of your first name in lowercase (which should print out your initial in UPPERCASE on the next line). <br>
+        2. Your first initial of your first name in UPPERCASE (which should print out your initial in lowercase on the next line). <br>
+        3. Your first initial of your last name in lowercase (which should print out your initial in UPPERCASE on the next line). <br>
+        4. Your first initial of your last name in UPPERCASE (which should print out your initial in lowercase on the next line). <br>
+
 
 
 
