@@ -31,10 +31,6 @@ For a detailed explanation on each step, click the Step Number, which will redir
 > 3. Your first initial of your last name in lowercase (which should print out your initial in UPPERCASE on the next line). <br>
 > 4. Your first initial of your last name in UPPERCASE (which should print out your initial in lowercase on the next line). <br>
 
-
-
-
-
 ## Conclusion
 - Hopefully, you now have a better understanding of how Literal Pools work within the ARM Processor. Though you likely won't come across the `pool needs to be closer` error during this semester, it is important to keep in mind why this happens for when you work with microcontrollers in the future.
 - You also implemented Conditional Execution for the first time in this lab. You will need to use this for most labs moving forward, and it's truly the first step towards industry level Assembly coding.
