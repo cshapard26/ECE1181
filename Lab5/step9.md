@@ -31,10 +31,14 @@ _start:
 @   2. Check if the character is a capital 'Z' or a lowercase 'a' (your choice which   
 @      one to check. You don't have to check both). Make sure to change the CSPR flags
 @      with your comparison. You can either do this using the CMP or SUBS commands.
-@   3. If the inputted character is greater than a 'Z' (or greater than or equal to an @      'a'), then subtract a constant from that number. You have to figure out this 
-@      constant on your own. Hint: if 'a' is 0x61 and 'A' is 0x41, what number would @      you have to subtract to switch between them?
-@   4. If the inputted character is less than or equal to a 'Z' (or less than an @      'a'), then add a constant from that number. You have to figure out this 
-@      constant on your own. Hint: if 'A' is 0x41 and 'a' is 0x61, what number would @      you have to add to switch between them?
+@   3. If the inputted character is greater than a 'Z' (or greater than or equal to an 
+@      'a'), then subtract a constant from that number. You have to figure out this 
+@      constant on your own. Hint: if 'a' is 0x61 and 'A' is 0x41, what number would 
+@      you have to subtract to switch between them?
+@   4. If the inputted character is less than or equal to a 'Z' (or less than an 
+@      'a'), then add a constant from that number. You have to figure out this 
+@      constant on your own. Hint: if 'A' is 0x41 and 'a' is 0x61, what number would 
+@      you have to add to switch between them?
 @   5. Make sure that the above two steps are only executed CONDITIONALLY. You can 
 @      find the conditional execution keywords in the book.
 @   6. Store the new value for the character back in the address of msg (you should 
