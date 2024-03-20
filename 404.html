@@ -1,39 +1,24 @@
 ---
-permalink: /404.html
+layout: home
 ---
-<!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-    <meta charset="UTF-8">
 
-{% seo %}
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#157878">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    {% include head-custom.html %}
-  </head>
-  <body>
-    <a id="skip-to-content" href="#content">Skip to the content.</a>
+<style type="text/css" media="screen">
+  .container {
+    margin: 10px auto;
+    max-width: 600px;
+    text-align: center;
+  }
+  h1 {
+    margin: 30px 0;
+    font-size: 4em;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+</style>
 
-    <header class="page-header" role="banner">
-      <h1 class="project-name">Error 404</h1>
-      <h2 class="project-tagline">👋This is not the page you are looking for👋</h2>
-    </header>
+<div class="container">
+  <h1>404</h1>
 
-    <main id="content" class="main-content" role="main">
-      <a href="https://www.coopshap.com/ECE1181">Click here to return to the main screen</a>
-      {{ content }}
-
-      <footer class="site-footer">
-        {% if site.github.is_project_page %}
-          <span class="site-footer-owner">Made from scratch by <a href="{{ site.github.owner_url }}">Cooper Shapard</a>.</span>
-          <span class="site-footer-credits">*Based on saline content</span>
-        {% endif %}
-      </footer>
-    </main>
-  </body>
-</html>
-
+  <p><strong>Page not found :(</strong></p>
+  <p>The requested page could not be found.</p>
+</div>
