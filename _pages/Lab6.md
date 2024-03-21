@@ -31,7 +31,7 @@ I have simplified the steps for you below for organizational purposes. Remember,
 - Step 4: Screenshot at least 3 different tests that showcase your program working. Include various upper and lower case mixtures of your first name, last name, and student ID. **Include the screenshots in your lab report.**
 
 # Code Given
-```asm
+```assembly
 @ 
 @ Assembler program to input ASCII characters via stdin 
 @ The program will take a string of up to 50 characters and modify it 
@@ -67,11 +67,59 @@ msg:   .fill 51, 1, '\n'  @ Allocates enough memory for 50 characters
 
 # Explanations
 ### Step 2
+This step is going to be the bulk of the work for this lab. While you will have to do the coding yourself, I can help nudge you in the right direction. Here are some resources that may help with the process.
 
-Can you check a condition before doing a branch?
+#### Pseudocode
+```assembly
+Load the address of msg into a register.
+Decide which register will keep track of your string locaiton.
 
-If we are ignoring both uppercase letters and numbers, then what is the only ascii range we need to check?
+Start loop.
+   Load the current character from msg into a register.
+   Check if it is '\n'. If so, print all the characters in msg and end the program.
+   Check if it is a lowercase letter. If so:
+      Make it uppercase like you did in Lab 5.
+      Store it back into the same address you took it from.
+   If it is not lowercase, then don't do anything.
+   Update the register that keeps track of your string location.
+   Branch to the start of the loop.
+```
+#### Notes
+1. If we are ignoring both uppercase letters and numbers, then what is the only ascii range we need to check?
+2. How can we check if we have reached the end of the string? What is the ascii value of a '\n' (also called a Line Feed)?
+3. You can either print out each character after checking if it is uppercase, or you can print them all out at the end. The choice is yours.
+4. For your tracker, you can either update the register that holds the address of `msg` or have a register that tracks how many characters away from the start of `msg` you are. One uses pre-indexed addressing and one uses post/auto-indexed addressing. Depending on your solution, which should you use?
+5. The program counter naturally increases by 4 bytes to get the next instruction. If one loop ends without branching to another part of the code, it will always start executing the next line, whether or not that is another loop. Always make sure that all branching cases are accounted for to prevent executing code you don't intend to (so if you have a BGT, you will probably want a BLE as well).
+#### Coding Practices
+1. It is possible to combine *branching* with *conditional execution.* For example:
+```assembly
+   MOV R1, #0
 
-How can we check if we have reached the end of the string? What is the ascii value of a '\n' (also called a Line Feed)?
+loopstart:
+   ADD R1, R1, #1    @ Adds 1 to R1
+   CMP R1, #5        @ Compares the number in R1 to the number 5
+   BLT loopstart     @ If R1 is less than 5, branch back to the loop start.
+                     @ Otherwise, continue downwards (to the Other Code).
 
-Can you reuse any code from Lab 5?
+   @ Other Code
+```
+2. You can have multiple branch heads. For example:
+```assembly
+loophead:
+   CMP R1, #5
+   BGT doThis   @ Goes to the doThis block of code if R1 > 5
+   BLT doThat   @ Goes to the doThat block of code if R1 < 5
+   BEQ end      @ Goes to end block of code if R1 == 5
+
+doThis:
+   SUB R1, R1, #1 @ Subtracts 1 from R1
+   B loophead     @ Returns to loophead block of code
+
+doThat:
+   ADD R1, R1, #1 @ Adds 1 to R1
+   B end          @ Branches to the 'end' block of code
+
+end:
+   @ Print output, etc.
+
+```
