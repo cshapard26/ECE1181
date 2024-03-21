@@ -71,27 +71,30 @@ This step is going to be the bulk of the work for this lab. While you will have 
 
 #### Pseudocode
 ```assembly
-Load the address of msg into a register.
-Decide which register will keep track of your string locaiton.
-
-Start loop.
-   Load the current character from msg into a register.
-   Check if it is '\n'. If so, print all the characters in msg and end the program.
-   Check if it is a lowercase letter. If so:
-      Make it uppercase like you did in Lab 5.
-      Store it back into the same address you took it from.
-   If it is not lowercase, then don't do anything.
-   Update the register that keeps track of your string location.
-   Branch to the start of the loop.
+@ Load the address of msg into a register.
+@ Decide which register will keep track of your string locaiton.
+@ 
+@ Start loop.
+@    Load the current character from msg into a register.
+@    Check if it is '\n'. If so, print all the characters in msg and end the program.
+@    Check if it is a lowercase letter. If so:
+@       Make it uppercase like you did in Lab 5.
+@       Store it back into the same address you took it from.
+@    If it is not lowercase, then don't do anything.
+@    Update the register that keeps track of your string location.
+@    Branch to the start of the loop.
 ```
+
 #### Notes
 1. If we are ignoring both uppercase letters and numbers, then what is the only ascii range we need to check?
 2. How can we check if we have reached the end of the string? What is the ascii value of a '\n' (also called a Line Feed)?
 3. You can either print out each character after checking if it is uppercase, or you can print them all out at the end. The choice is yours.
 4. For your tracker, you can either update the register that holds the address of `msg` or have a register that tracks how many characters away from the start of `msg` you are. One uses pre-indexed addressing and one uses post/auto-indexed addressing. Depending on your solution, which should you use?
 5. The program counter naturally increases by 4 bytes to get the next instruction. If one loop ends without branching to another part of the code, it will always start executing the next line, whether or not that is another loop. Always make sure that all branching cases are accounted for to prevent executing code you don't intend to (so if you have a BGT, you will probably want a BLE as well).
+
 #### Coding Practices
 1. It is possible to combine *branching* with *conditional execution.* For example:
+
 ```assembly
    MOV R1, #0
 
@@ -103,7 +106,9 @@ loopstart:
 
    @ Other Code
 ```
+
 2. You can have multiple branch heads. For example:
+
 ```assembly
 loophead:
    CMP R1, #5
