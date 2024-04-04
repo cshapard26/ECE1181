@@ -154,7 +154,16 @@ For this step, go replace every `PUSH` command with STMxx (where xx is your prot
 
 
 ## Step 6
+To convert your program from a Pass by Register to a Pass by Stack procedure, you need to store the values of `R0` and `R1` on the stack BEFORE you branch to the toupper function. Then, in the toupper function, after you add R4 and R5 to the stack (which you should already be doing from the original code), you need to load the values of R0 and R1 FROM the stack. However, since those values are not on top, you will need to offset the stack pointer by a certain number (positive if you are using a descending protocol and negative if you are using an ascending protocol). You must figure out what this offset is and how to change the stack pointer to get the values you want, while also making sure it ends up where it was before the offset. Before ending the function, you need to push the new value of R0 onto the stack (you can do this after the LDRyy statement that is already at the bottom of the function).
 
+Then, when you return to the main function, you need to load the values of R0 FROM the stack. This should be done before the `MOV R2, R0` command so that the correct value is placed in R2. 
+
+It's easy to get lost in all this pushing and popping, so just let a TA know if you get stuck, and we can come help flush it out!
+
+### Tips
+1. Remember to include the ! after the SP in your STMxx and LDRyy commands. So it should look like `STMxx SP!, {your registers}` and `LDRyy SP!, {your registers}`.
+2. Everything on the stack is stored in sets of 4 bytes. If your stack has 2 values on top of the values you want, then how may bytes will you need to reach over to get the values you want? Remember to account for if you're using a Full or Empty stack protocol!
+3. Confused on what is on your stack at any given time? Try to draw it out! The TA's can help you find scratch paper if you don't have any.
 
 ## Step 7
-You might already have this from the code you modified, but if you don't, just add the LR to the stack when you store the values and pop it when you load them. **Make sure to update your offset to include the LR.**
+You might already have this from the code you modified, but if you don't, just add the LR to the stack when you store the values and pop it when you load them (but only in the STMxx/LDRyy statements in the toupper function). **Make sure to update your offset to include the LR.**
