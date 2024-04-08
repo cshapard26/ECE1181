@@ -263,7 +263,7 @@ You were given no code nor psuedocode for this question, but I will provide some
 3. Test your new code using the debugger to make sure that it works as intended. Use `x /40uwfs memoryAddressOf_values` to print out all the values from memory. The values should be in this order: `0abCdefghijklmno, 1abcDefghijklmno, ... 8Abcdefghijklmno, 9abcdEfghijklmno` (you can tell the correct order by looking at the first number. However, your program should never look at that number to determine the sorting).
 
 That is for sorting the information. Now, for the binary search. Here is a C implementation:
-```c
+```
     int low = 0;
     int high = size - 1;
     int mid;
