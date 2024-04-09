@@ -224,8 +224,8 @@ end:
     SVC 0
 
 .data
-    _valueList: .word 0x88888888, 0x44444444, 0x00000000, 0x11111111, 0x99999999, 
-                      0x77777777, 0x22222222, 0x33333333, 0x55555555, 0x66666666
+    _valueList: .word 0x88888888, 0x44444444, 0x00000000, 0x11111111, 0x99999999
+                .word 0x77777777, 0x22222222, 0x33333333, 0x55555555, 0x66666666
 
 ```
 
@@ -302,8 +302,8 @@ The structure should be the same as you've always written. Set up simple "wrappe
 Here is an example `.data` section, with keys and values lined up correctly. The keys are 1 word each, and the values are 16 bytes, aka, 4 words each. To make sure you are updating the whole value and not just the first number, a random letter in the value is capitalized. Those same letters should remain capitalized in the final, sorted set.
 ```asm
 .data
-    _keys:  .word 0x88888888, 0x44444444, 0x00000000, 0x11111111, 0x99999999, 
-                  0x77777777, 0x22222222, 0x33333333, 0x55555555, 0x66666666
+    _keys:  .word 0x88888888, 0x44444444, 0x00000000, 0x11111111, 0x99999999
+            .word 0x77777777, 0x22222222, 0x33333333, 0x55555555, 0x66666666
     _values:       
             .ascii "8Abcdefghijklmno",
             .ascii "4aBcdefghijklmno",
