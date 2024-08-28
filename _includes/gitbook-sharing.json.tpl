@@ -26,7 +26,7 @@
 
                 "linkedin": true,
 
-                "kofi": true,
+                "kofi": false,
 
                 "coopshap": true,
 
