@@ -174,7 +174,7 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
         fontState = gitbook.storage.get('fontState', {
             size:   config.size || 2,
             family: configFamily,
-            theme:  configTheme
+            theme:  configTheme || 2
         });
 
         update();
