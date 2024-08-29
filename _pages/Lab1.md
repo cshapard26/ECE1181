@@ -61,7 +61,7 @@ Now, to edit and create files on your red pitaya, there are 2 options: VSCode an
 This should be everything you need to know to setup the Red Pitaya. If you encounter difficulty at any step, let the nearest TA know and we can help you through the process. **For the first lab, we will be prioritizing getting people's pitayas working. Please be patient if you have a coding question, as hardware errors are our primary concern.**
 
 # Explanations
-For this lab, you will need the Smith book, which is required for this class. You need a copy of the book, either digital or physical. You should buy an official copy from an official website to have the official book for the official class. Under NO circumstances should you download a free pdf of the book from [Library Genesis](https://libgen.rs/), specifically of the Smith book [here](https://libgen.li/ads.php?md5=98DFEB6901C650A0E3602185B4AAD80D). That would be wrong, so sdon't do that. I cannot legally condone piracy, so don't use the above link and instead buy an official copy of the text.
+For this lab, you will need the Smith book, which is required for this class. You need a copy of the book, either digital or physical. You should buy an official copy from an official website to have the official book for the official class. Not a pirated one.
 
 Now, read through chapter 1. You can skim until page 17, where you will be getting instructions for this lab.
 
