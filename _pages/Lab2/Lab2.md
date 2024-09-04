@@ -6,10 +6,10 @@ category: Jekyll
 layout: post
 ---
 
-[Download Lab Instructions](https://www.coopshap.com/ECE1181/pages/Lab2_ToolingUp.pdf)
+[Download Lab Instructions](/ECE1181/pages/Lab2/Lab2_ToolingUp.pdf)
 
 # Overview
-Welcome to Lab 2! Here, you will learn the basics of a makefile and how to use the debugger to learn more about your program. Both of these skills are CRUCIAL for your success in the course, and you will use both in every single lab after this one. If you don't understand something or want further clarification, let a TA know and we can help you out. Also, if you need a refresher on any of the skills you learned last lab session, you can always check the [Lab 1 guide](/ECE1181/pages/Lab1/) again!
+Welcome to Lab 2! Here, you will learn the basics of a makefile and how to use the debugger to learn more about your program. Both of these skills are CRUCIAL for your success in the course, and you will use both in every single lab after this one. If you don't understand something or want further clarification, let a TA know and we can help you out. Also, if you need a refresher on any of the skills you learned last lab session, you can always check the [Lab 1 guide](/ECE1181/pages/Lab1/Lab1/) again!
 
 # Explanations
 ## Step 1
@@ -32,16 +32,28 @@ Follow the instructions on pages 57-62 in the Smith book. You will become VERY f
 3. Type `r` to run the program. It will automatically stop at your first breakpoint. In this case, it is the start of your program.
 4. Here, you will see a line like `_start: MOV R2, #0x6E`. To EXECUTE this line (it has not been done yet), type `s`, which stands for "step." Every time you type `s`, it will execute one line of code. Do this as many times as needed to get where you want (or set a separate breakpoint).
 5. At any time, type `i r` (for Inspect Registers) to check what values are stored in all registers. This screen also contains a lot more helpful information, which you will learn about more in the coming labs.
-6.  This step isn't particularly useful for this lab, but you can type `x \4ubfx <memory address>` to check the contents of the memory at a specific location. You will learn more about this in a later lab.
+6.  This step isn't particularly useful for this lab, but you can type `x /4ubfx <memory address>` to check the contents of the memory at a specific location. You will learn more about this in a later lab.
 
 Now, open up your "movexamps.s" file and change the code so that the first four digits of your SMUID appear in the register. So, if your SMUID is 0x12345678, you want it to appear in R2 as 0x120034. You should only need to change two numbers. *Make sure to `make` your file again after every edit.* Next, use the debug protocol listed above to run this system and show that the value of R2 is 0x120034 (or whatever your ID is). **Take a screenshot showing the debug process and the first digits of your SMUID in R2.**
 
 ## Step 3
+Update your code to place the same ID number into 4 different registers (R2-R5). This can be done with the following code, where the numbers are from your SMUID like before (using 0x12345678 as example):
+```asm
+    MOV R2, #0x34 
+    MOVT R2, #0x12 
+    MOV R3, #0x34 
+    MOVT R3, #0x12 
+    MOV R4, #0x34 
+    MOVT R4, #0x12 
+    MOV R5, #0x34 
+    MOVT R5, #0x12 
+```
+Next, you want to add a breakpoint to another line. Add a breakpoint tag (hint: this is what `_start` is, but it can be any name) before one of the MOV commands (besides the R2 one). Use the debugging procedure you learned in Step 2 to create a breakpoint at your new tag, run to it, and step over the lines where it is placed. 
 
-
+You also want to display the contents of the registers AND the contents of memory at the location of your breakpoint (using the command `x /4ubfi <name of your breakpoint>`). **Take a screenshot of your terminal, showing the process of you creating a breakpoint, running to it, stepping over a few lines, and displaying both the registers and memory.**
 
 # Conclusion
-
+Congratulations on finishing Lab 2! I hope this one was a bit quicker than the last and that you are feeling more comfortable with the syntax of ARM. In this lab, you learned how to build files with the special `makefile`, load large numbers into registers, and use the debugger (`gdb`) to analyze your code while it is running. If you have any questions, be sure to ask a TA. We also have office hours if you have more questions. For Cooper's office hours, email him at cshapard@smu.edu to set up a meeting location. Be sure to turn in your lab report before next lab, and have a great rest of your day.
 
 
 # Code Given

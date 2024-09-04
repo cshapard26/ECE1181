@@ -6,8 +6,8 @@ category: Jekyll
 layout: post
 ---
 
-[Download Lab Instructions](https://www.coopshap.com/ECE1181/pages/Lab1_GettingStarted.pdf)<br>
-[Download Red Pitaya Setup Instructions](https://www.coopshap.com/ECE1181/pages/Headless_RedPitaya_Configuration.pdf)
+[Download Lab Instructions](/ECE1181/pages/Lab1/Lab1_GettingStarted.pdf)<br>
+[Download Red Pitaya Setup Instructions](/ECE1181/pages/Lab1/Headless_RedPitaya_Configuration.pdf)
 
 # Overview
 Welcome to Lab 1! Here, you will learn how to set up your red pitaya, connect to it using your laptop, and start writing some code. Luckily for you, this year all the red-pitayas will be given to you pre-assembled, which cuts down on the time-commitment of this lab. Remember that this online guide is for your convenience, but is not comprehensive and should not be used as a replacement for the official lab guide, which you can download above. If you find any errors in this guide—whether logic, spelling, or grammar—please let TA Cooper know so he can get it fixed up ASAP.
