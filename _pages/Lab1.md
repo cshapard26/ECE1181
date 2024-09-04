@@ -10,7 +10,7 @@ layout: post
 [Download Red Pitaya Setup Instructions](https://www.coopshap.com/ECE1181/pages/Headless_RedPitaya_Configuration.pdf)
 
 # Overview
-Welcome to Lab 1! Here, you will learn how to set up your red pitaya, connect to it using your laptop, and start writing some code. Luckily for you, this year all the red-pitayas will be given to you pre-assembled, which cuts down on the time-commitment of this lab. Remember that this online guide is for your convenience, but is not comprehensive and should not be used as a replacement for the official lab guide, which you can download above. If you find any errors in this guide—whether logic spelling, or grammar—please let TA Cooper know so he can get it fixed up ASAP.
+Welcome to Lab 1! Here, you will learn how to set up your red pitaya, connect to it using your laptop, and start writing some code. Luckily for you, this year all the red-pitayas will be given to you pre-assembled, which cuts down on the time-commitment of this lab. Remember that this online guide is for your convenience, but is not comprehensive and should not be used as a replacement for the official lab guide, which you can download above. If you find any errors in this guide—whether logic, spelling, or grammar—please let TA Cooper know so he can get it fixed up ASAP.
 
 # Red Pitaya Setup
 ## Physical Setup
@@ -61,7 +61,7 @@ Now, to edit and create files on your red pitaya, there are 2 options: VSCode an
 This should be everything you need to know to setup the Red Pitaya. If you encounter difficulty at any step, let the nearest TA know and we can help you through the process. **For the first lab, we will be prioritizing getting people's pitayas working. Please be patient if you have a coding question, as hardware errors are our primary concern.**
 
 # Explanations
-For this lab, you will need the Smith book, which is required for this class. You need a copy of the book, either digital or physical. You should buy an official copy from an official website to have the official book for the official class. Not a pirated one.
+For this lab, you will need the Smith book, which is required for this class. You need a copy of the book, either digital or physical. You should buy an official copy from an official website to have the official book for the official class. Not a pirated one :)
 
 Now, read through chapter 1. You can skim until page 17, where you will be getting instructions for this lab.
 
@@ -81,17 +81,14 @@ Here, you need to edit the code to make it more personal. To do this, change the
 To check that your program works, you will need to run it again. It is important to note that you must recompile your code EVERY TIME YOU MAKE A CHANGE. You can recompile using the command `./build`. Run your program again using `./HelloWorld`, which should output "Hello [Your Name]!"into the terminal. **Take a screenshot of the output, as well as your code, and make sure to include it in your lab report.**
 
 ### Part B
-This next step is pretty simple. Go into HelloWorld.s and change the LAST `svc 0` to `svc AnyOtherNumber`. Recompile your code and rerun it. What happened? Take a screenshot of the output and write out what you saw happen in your own words. If nothing happened, take note of that as well.
+This next step is pretty simple. Go into HelloWorld.s and change the LAST `mov R0, #0` to `mov R0, #AnyOtherNumber`. Where `AnyOtherNumber` is a number other than 0. Recompile your code and rerun it. What happened? Take a screenshot of the output and write out what you saw happen in your own words. If nothing happened, take note of that as well.
 
 # Conclusion
 Congrats! You just completed your first lab for ECE1181. All that's left to do now is to write your lab report and submit it sometime before your next lab session. Check the official lab instructions for more information about what to include in your lab report. When in doubt, always include screenshots. You may have felt a little overwhelmed during this first session. That's okay. It may take a minute to settle into these concepts, but know that there are plenty of resources available to you if you are confused. See either Dr. Camp's office hours or preferably the TA office hours for help with labs, homework, or general questions about the course. We hope you have a great rest of your day and look forward to the next lab!
 
 
 # Code Given
-WARNING: I strongly recommend typing this into your Red Pitaya
-directly – The reason is that there are hidden symbols that may cause a high degree
-of frustration from copy/paste that would be spared by just typing it in. Also, you
-get a better feel for the code in doing so. You will likely not understand all that is happening in this code for now. That is okay. As the semester goes on, you will gain an understanding of everything you see below.
+WARNING: I strongly recommend typing this into your Red Pitaya directly – The reason is that there are hidden symbols that may cause a high degree of frustration from copy/paste that would be spared by just typing it in. Also, you get a better feel for the code in doing so. You will likely not understand all that is happening in this code for now. That is okay. As the semester goes on, you will gain an understanding of everything you see below.
 
 HelloWorld.s:
 ```asm
