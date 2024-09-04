@@ -65,7 +65,7 @@ For this lab, you will need the Smith book, which is required for this class. Yo
 
 Now, read through chapter 1. You can skim until page 17, where you will be getting instructions for this lab.
 
-## Part 1
+## Step 1
 *Code from the book can be found in the [Code Given](#code-given) section of this guide.*
 
 Type the code from the book into a new file called "HelloWorld.s". Next, add the two lines from the book into a file called "build". It should NOT have a filetype (i.e. .txt, .s, etc.). You can check to make sure all the files were created properly by typing `ls` into the terminal. This will list all the files in the current folder on your Red Pitaya. If you don't see "HelloWorld.s" and "build", ask a TA for assistance.
@@ -74,7 +74,7 @@ In your terminal (in VSCode, you can open the terminal using `Ctrl/Cmd + Backtic
 
 To compile your code, run `./build` in your terminal. This with create a new file called "HelloWorld" (namely different than "HelloWorld.s"). This is the code your computer can run. To run it, type `./HelloWorld` into your terminal. This should output the phrase "Hello World!" in the next line of your terminal. If it does not, ask a TA for asissistance.
 
-## Part 2
+## Step 2
 ### Part A
 Here, you need to edit the code to make it more personal. To do this, change the string at the bottom of "HelloWorld.s" (Not "HelloWorld" or "HelloWorld.o") to "Hello [Your Name Here]!". Remember that the red pitaya needs to know how many characters to write on the screen, so you will need to update the line `mov R2, #13   @ length of our string ` to the new length of the string. Remember to include spaces, special characters, and the "\n" as a single character when counting.
 
