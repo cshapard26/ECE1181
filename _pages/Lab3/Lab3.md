@@ -9,18 +9,22 @@ layout: post
 [Download Lab Instructions](/ECE1181/pages/Lab3/Lab3_MovingAdding.pdf)
 
 # Overview
-Welcome to Lab 3! Now that you are familiar with the syntax of ARM and the debugger, we can start analyzing how the ARM processor manipulates data. There are two main takeaways from this lab. First, the ARM processor does not interpret values; only the programmer does. Whether you are doing signed addition, unsigned addition, or something else, the ARM processor behaves the exact same way, using Two's Complement. Thus, the result of an operation may be a signed or unsinged number, but the processor doesn't know which it is. It is up to the programmer to interpret the output using the CPSR, which you will learn about soon. Second, this lab focuses on placing values in registers **without** accessing memory. Though the word "load" is used in the text, this is a misnomer, as "load" is exclusive to accessing memory in ARM. You will learn more about memory management in a future lab, but understand that for now we are only looking at immediate values.
+Welcome to Lab 3! Now that you are familiar with the syntax of ARM and the debugger, we can start analyzing how the ARM processor manipulates data. There are two main takeaways from this lab. First, the ARM processor does not interpret values; only the programmer does. Whether you are doing signed addition, unsigned addition, or something else, the ARM processor behaves the exact same way, using Two's Complement. Thus, the result of an operation may be a signed or unsinged number, but the processor doesn't know which it is. It is up to the programmer to interpret the output using the CPSR condition codes (NZCV), which put to use in this lab. Second, this lab focuses on placing values in registers **without** accessing memory. Though the word "load" is used in the text, this is a misnomer, as "load" is exclusive to accessing memory in ARM. You will learn more about memory management in a future lab, but understand that for now we are only looking at immediate values.
 
 As always, this guide is a supplement for the official lab instructions, not a replacement. When in doubt, refer back to the official instructions. If you need any help or clarification, be sure to ask a TA. The old lab guides are avaliable in case you want to freshen up on the skills you have already learned.
 
 # Explanations
 ## Step 1 & 2
-Read pages 27-41 in the Smith textbook. Please actually do this. Many of the topics will be familiar from lecture, but it is cruicial to get another perspective before continuing with the lab.
+Read pages 27-41 in the Smith textbook. Please actually do this. Many of the topics will be familiar from lecture, but it is cruicial to get another perspective before continuing with the lab. 
 
 ## Step 3
 Following the book, create a file using the code from Listing 2-1 (also found in the [Code Given](#code-given) section). Be sure to update your "makefile" file with the new name of your file. There should be 3 updates. This is the same makefile you used in the previous lab. Build the file with the command `make DEBUG=1`. Next, use the command `objdump -s -d NameOfYourFile.o` to object dump the file. Please please please replace the word "NameOfYourFile" with the actual name of your file (likely "movexamps"). This is the #1 issue people have. **Take a screenshot of the objdump output and include it in your lab report.**
 
 ## Step 4
+Take your code from step 3 and change all of the `MOV` instructions to `MOVS`. Ignore the `MOVT` line. Adding the S makes the program update the CPSR (Current Program Status Register) flags, which you should remember from lecture. These are the NZCV bits. For this step, we only care about the C (carry) bit and can examine it with the debugger. 
+1. Add breakpoints in front of the first 7 `MOVS` lines. This is similar to what you did last lab. I recommend you name the breakpoints `mv1:`, `mv2:`, etc. 
+2. Enter the program using the debugger (gdb). Set breakpoints for each line and step over each breakpoint. After you step over a MOVS line, display the registers. There is a register named CSPR, which is where the CPSR flags are stored. **For each of these MOVS lines, include a screenshot of the registers/CPSR.** You should have 7 screenshots for this step.
+3. Now, you want to check the C bit of your CPSR. This can get confusing, so read carefully and ask a TA if you have questions. You learned from lecture that there are 4 CPSR flags we want to pay attention to: NZCV. These 4 bits are the *leftmost* bits of the CPSR. However, in your program, the CPSR will be displayed in hexadecimal. You will need to extract the binary flags from the hexadecimal notation. Since 4 bits turn into 1 character in hex, we can do this easily by <u>converting just the very first character of the CPSR register from hex to binary</u>. So if the register contains "0x90000010", then we would just take the 9, convert it into binary—1001—and assign each bit to its flag NZCV in that order. So in this example, the N and V flags are on/1 and the Z and C flags are off/0. Another example: "0xB681EF21". We take the leftmost character "B", convert it to binary "1011", and assign the flags "N_CV". <u>You may occationally see a shortened CPSR like "0x10" that does not have all 8 characters. This means that all the flags are off/0.</u> **Under each of the 7 screenshots, explain why each MOVS command gave the resulting C value.**
 
 ## Step 5
 Read pages 45-49 in the Smith book. These concepts should be familiar from lecture and HW1.
@@ -32,6 +36,14 @@ Create a new file called "mvnaddexamp.s" and fill it with the code from Listing 
 Create a new file called "addsadcexamp.s" and fill it with the code from Listing 2-4 (also in the [Code Given](#code-given) section). Update your "makefile" with the new filename; there should be three updates. Build the file with the debugger enabled.
 
 ## Step 8
+We are now going to do something similar to step 4, but now we care about all 4 CPSR flags, NZCV. Using your code from step 7, change the line `MOV R3, 0xFFFFFFFF` to `MOV R3, 0xYourSMUID`, so if your ID was 12345678, you would have `MOV R3, 0x12345678`. This number will be added to the number in R5. Your goal is to change the number in R5 to achieve *each/all* condition code value, NZCV. You will want a situation where N = 0, one where N = 1, one where C = 0, one where C = 1, etc. Since you can have multiple condition codes, you do not necessarily need 8 screenshots/8 R5 values. Ideally, you could do this is 2 numbers in R5, but use as many as you need to complete this step.
+
+To do this, I would recommend placing a breakpoint at the `ADC` line. Each time you change R5, `make DEBUG=1` the program, open the debugger, run to your breakpoint, then print the registers to check the CPSR value. 
+
+If this step is confusing, check the official lab section and ask a TA if you still need help.
+
+**For each CPSR value you generate, take a screenshot of the registers and include it in your lab report. We should be able to see both the value of R5 and the CPSR in the screenshot.**
+
 
 
 # Conclusion
@@ -69,7 +81,7 @@ _start:
                         @ results in an error
                         @ Uncomment the instruction if you want to
                         @ see the error
-                        @ MOV R1, #0xABCDEF11 @ Too big for #imm16
+    @MOV R1, #0xABCDEF11 @ Too big for #imm16
                         @ Example of MVN
     MVN R1, #45
                         @ Example of a MOV that the Assembler will
