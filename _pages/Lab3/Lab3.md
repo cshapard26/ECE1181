@@ -58,8 +58,7 @@ Listing 2-1:
 .global _start          @ Provide program starting address
                         @ Load R2 with 0x4F5D6E3A first using MOV and MOVT
 _start: 
-    MOV R2, #0x6E3A
-    MOVT R2, #0x4F5D
+    LDR R2, #0x4F5D6E3A
                         @ Just move R2 into R1
     MOV R1, R2
                         @ Now let’s see all the shift versions of MOV
