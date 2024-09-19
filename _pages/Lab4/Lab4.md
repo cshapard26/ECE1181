@@ -82,7 +82,7 @@ ADD R2, R2, R3
 This code adds the number 0x01010101 to your student ID, then stores it back in the original memory address. Go through the same process as Step 13 and **in your lab report, discuss what values are stored at the memory address.**
 
 ## Step 15
-Go back to your file from Step 10/11. Under the line `LDR R1, =mynumber`, add `LDR R2, [R1]`. This will put your student ID into R2. Next, you are going to do exactly what you did in Step 10, but with STR commands. Simply replace all the `LDR`s with `STR`s BELOW the line `LDR R2, [R1]`. Update the lengths (B, SB, etc) as follows:
+Go back to your file from Step 10/11. Under the line `LDR R1, =mynumber`, add `LDR R2, [R1]`. This will put your student ID into R2. Next, you are going to do exactly what you did in Step 10, but with STR commands. Simply replace all the `LDR`s with `STR`s (besides the ones in `LDR R1, =mynumber`) BELOW the line `LDR R2, [R1]`. Update the lengths (B, SB, etc) as follows:
 1. Byte
 2. Byte
 3. Halfword
