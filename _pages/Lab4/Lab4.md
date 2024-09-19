@@ -140,6 +140,10 @@ _start:
     LDR R1, =mynumber @Make sure to update mynumber in the .data section with your student ID
     STR R2, [R1] 
 
+    MOV R0, #0
+    MOV R7, #1
+    SVC 0
+
 .data
 mynumber: .word 0xYourStudentID
 ```
