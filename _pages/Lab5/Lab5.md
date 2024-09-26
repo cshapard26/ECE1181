@@ -32,7 +32,7 @@ Use the `make DEBUG=1` command again and check the new memory address at R1 like
 ## Step 5
 Now, add a very large about of bytes in the same place as the Arbitrary Commands from earlier. You will need at least `4096 Bytes` to successfully get the error message described in the lab report ("Error: invalid literal constant: pool needs to be closer"). **Take a screenshot of the error message**, which will occur when you try and *make* the program. Describe in your lab report how you made this occur. 
 
-There are a couple options you can do for this. I suggest either using a `.fill` command or a `.ascii` command with a very large string, like a [copypasta](https://copypastadb.com/). The fill command is probably cleaner, and you can read about how to use it on page 90 in the Smith textbook under Table 5-1.
+There are a couple options you can do for this. I suggest either using a `.fill` command or a `.ascii` command with a very large string, like a copypasta. The fill command is probably cleaner, and you can read about how to use it on page 90 in the Smith textbook under Table 5-1.
 
 ## Step 6
 Create a new file called `inputASCII.s`, and fill it with the code in the Code Given section of the instructions. Be sure to update the `makefile` with the new file name.
