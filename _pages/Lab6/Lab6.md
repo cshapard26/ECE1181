@@ -16,7 +16,7 @@ In this lab, you will begin to see how a program can execute different parts bas
 
 While this new behavior is very useful, it is also very dangerous. You may move the program counter to a location it's not allowed to execute, or if it stops lining up with the four byte lines of code, that could cause problems that are very hard to identify. That second part is easy to find if you know what you're looking for. **The main thing to note is that the program counter must always be a multiple of four.** Luckily, we use hex numbers, so you can check if a number is divisible by four by checking if the hex number ends in 0, 4, 8, or c. If so, then your program counter is lined up correctly!
 
-I have simplified the steps for you below for organizational purposes. Remember, this is not a replacement for the lab guide, just a more readable way to phrase the information. If you need any help, be sure to ask a TA!
+If you need any help, be sure to ask a TA!
 
 # Explanations
 ## Step 1
@@ -33,14 +33,14 @@ Similarly to last lab, you need to design an algorithm that changes a lowercase 
         - If it is not a letter, ignore it.
         - Update the location of your tracker.
 
-##### Notes
+**Notes**
 1. If we are ignoring both uppercase letters and numbers, then what is the only ascii range we need to check?
 2. How can we check if we have reached the end of the string? What is the ascii value of a '\n' (also called a Line Feed)?
 3. You can either print out each character after checking if it is uppercase, or you can print them all out at the end. The choice is yours.
 4. For your tracker, you can either update the register that holds the address of `msg` or have a register that tracks how many characters away from the start of `msg` you are. One uses pre-indexed addressing and one uses post/auto-indexed addressing. Depending on your solution, which should you use?
 5. The program counter naturally increases by 4 bytes to get the next instruction. If one loop ends without branching to another part of the code, it will always start executing the next line, whether or not that is another loop. Always make sure that all branching cases are accounted for to prevent executing code you don't intend to (so if you have a BGT, you will probably want a BLE as well).
 
-##### Coding Practices
+**Coding Practices**
 1. It is possible to combine *branching* with *conditional execution.* For example:
 
 ```assembly
@@ -78,7 +78,7 @@ end:
 ```
 
 ## Step 3
-**In your lab report, describe how your algorithm works, line by line for the code you wrote.**
+**In your lab report, describe line-by-line how your algorithm works for the code you wrote.**
 
 ## Step 4
 Screenshot at least 3 different tests that showcase your program working. Include various upper and lower case mixtures of your first name, last name, and student ID. **Include the screenshots in your lab report.**
