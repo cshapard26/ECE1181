@@ -113,7 +113,7 @@ _start:
 
    MOV R0, #0           @ Use 0 return code 
    MOV R7, #1           @ Service command code 1 terminates this program 
-   MOV 0                @ Call linux to terminate 
+   SVC 0                @ Call linux to terminate 
 
 .data 
    msg:   .fill 51, 1, '\n'  @ Allocates enough memory for 50 characters 
