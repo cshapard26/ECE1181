@@ -1,7 +1,7 @@
 ---
 title: "Lab 7: Functions and the Stack"
 author: Cooper Shapard
-date: 2024-04-01
+date: 2024-10-17
 category: Jekyll
 layout: post
 ---
@@ -37,15 +37,51 @@ Nested function calls means that you can call another function within a function
 
 I have simplified the steps for you below for organizational purposes. Remember, this is not a replacement for the lab guide, just a more readable way to phrase the information. If you need any help, be sure to ask a TA!
 
+# Explanations
+## Step 1
+Read through pages 109-116 in the Smith book. It should be review from class, but please actually read it so you can get a different perspective on functions and the stack.
 
-# Steps
-- Step 1: Read through pages 109-116 in the Smith book. It should be review from class, but please actually read it so you can get a different perspective on functions and the stack.
-- Step 2: Use the instructions on page 116 to 121 to make the specified Uppercase Revisited program. Code provided in the [Code Given Section](#code-given)  Make and run the code to check that it works. If not, ask a TA.
-- [Step 3](#step-3): Choose your favorite stack convention (IA, IB, DA, DB), and replace all the PUSH and POP commands in your program with the correct STMxx and LDRyy commands (where xx and yy are your stack conventions).
-- Step 4: Make sure your code works the exact same way as it did in Step 2. If not, try to find and fix the issues on your own before asking a TA. **Take a screenshot showing that your program works with your chosen stack convention.**
-- Step 5: Read through pages 121-124 in the Smith book. Please actually do this.
-- [Step 6](#step-6): Look at your modified code Step 3. This code uses *pass by register* to input and output the data to and from the function. Currently, R0 and R1 contain the addresses of the input and output string, and after the function executes, R0 is replaced by the length of the string. Your goal is to change this code so that it used *pass by stack* instead, which uses STMxx and LDRyy to send data to the toupper function. Then, use STMxx and LDRyy to get the length of the string into R0 after toupper executes. Note that you will need to manually offset the stack pointer to grab R0 and R1 from the stack, since R4 and R5 will go on top of them. Your offset may be positive or negative depending on your stack convention. It may help to draw out your stack so it is easier to visualize.
-- [Step 7](#step-7): If you have not already, modify your STMxx and LDRyy statements to include the Link Register (LR) so that your program returns to the same place after performing the subroutine/function. **Take a screenshot showing your progam works with your new Pass by Stack method.**
+## Step 2
+Use the instructions on page 116 to 121 to make the specified Uppercase Revisited program. Code provided in the [Code Given Section](#code-given). Make and run the code to check that it works. If not, ask a TA.
+
+## Step 3
+Choose your favorite stack convention (IA, IB, DA, DB), and replace all the PUSH and POP commands in your program with the correct STMxx and LDRyy commands (where xx and yy are your stack conventions). Choosing a stack convention is like choosing a starter pokémon. There's really only a few options, but that doesn't mean you won't drastically overthink which one to choose. Here is a quick table with some info (SP stands for Stack Pointer):
+
+| Name | Abbreviation | Example | Why you should choose it |
+|:----:|:------------:|:--------|:-------------------------|
+|Increment Before/<br>Full Ascending|IB|0x200b0: Data1<br>0x200b4: Data2<br>0x200b8: Data3<br>0x200bc: Data4 <-- SP|Counts upwards and always<br> points to the last used data.<br> Best if you like to logically keep<br> track of where everything is.|
+|Increment After/<br>Empty Ascending|IA|0x200b0: Data1<br>0x200b4: Data2<br>0x200b8: Data3<br>0x200bc: Empty <-- SP|Counts upwards, but conceptually<br> starts at 0 instead of 1.<br> Best if you have lots of <br> programming experience.|
+|Decrement Before/<br>Full Descending|DB|0x200b0: Data4 <-- SP<br>0x200b4: Data3<br>0x200b8: Data1<br>0x200bc: Data1|Counts downwards and always<br> points to the last used data.<br> Best for people who like<br> to visualize the stack<br> like a stack of papers.|
+|Decrement After/<br>Empty Descending|DA|0x200b0: Empty <-- SP<br>0x200b4: Data3<br>0x200b8: Data1<br>0x200bc: Data1|Counts downwards and always<br> points to the next avaliable spot.<br> Best for people who don't like<br> any of the other options and<br>just wants to choose one and<br>move on.|
+
+Now, it's important to note that **The Store Sets the Protocol**. However, **your load should always use the opposite protocol**. I just remember this by flipping each letter in the protocol to the other option during the load. So, if you want to use Increment Before, you will use STMIB and LDRDA. If you were using Decrement After, you will use STMDA and LDRIB, etc.
+
+For this step, go replace every `PUSH` command with STMxx (where xx is your protocol), and every `POP` command with LDRyy (where yy is the opposite of your protocol).
+
+## Step 4
+Make sure your code works the exact same way as it did in Step 2. If not, try to find and fix the issues on your own before asking a TA. **Take a screenshot showing that your program works with your chosen stack convention. Make sure to include this code in your lab report as well.**
+
+## Step 5
+Read through pages 121-124 in the Smith book.
+
+
+## Step 6
+Look at your modified code Step 3. This code uses *pass by register* to input and output the data to and from the function. Currently, R0 and R1 contain the addresses of the input and output string, and after the function executes, R0 is replaced by the length of the string. Your goal is to change this code so that it used *pass by stack* instead, which uses STMxx and LDRyy to send data to the toupper function. Then, use STMxx and LDRyy to get the length of the string into R0 after toupper executes. Note that you will need to manually offset the stack pointer to grab R0 and R1 from the stack, since R4 and R5 will go on top of them. Your offset may be positive or negative depending on your stack convention. It may help to draw out your stack so it is easier to visualize.
+
+To convert your program from a Pass by Register to a Pass by Stack procedure, you need to store the values of `R0` and `R1` on the stack BEFORE you branch to the toupper function. Then, in the toupper function, after you add R4 and R5 to the stack (which you should already be doing from the original code), you need to load the values of R0 and R1 FROM the stack. However, since those values are not on top, you will need to offset the stack pointer by a certain number (positive if you are using a descending protocol and negative if you are using an ascending protocol). You must figure out what this offset is and how to change the stack pointer to get the values you want, while also making sure it ends up where it was before the offset. Before ending the function, you need to push the new value of R0 onto the stack (you can do this after the LDRyy statement that is already at the bottom of the function).
+
+Then, when you return to the main function, you need to load the values of R0 FROM the stack. This should be done before the `MOV R2, R0` command so that the correct value is placed in R2. 
+
+It's easy to get lost in all this pushing and popping, so just let a TA know if you get stuck, and we can come help flush it out!
+
+### Tips
+1. Remember to include the ! after the SP in your STMxx and LDRyy commands. So it should look like `STMxx SP!, {your registers}` and `LDRyy SP!, {your registers}`.
+2. Everything on the stack is stored in sets of 4 bytes. If your stack has 2 values on top of the values you want, then how may bytes will you need to reach over to get the values you want? Remember to account for if you're using a Full or Empty stack protocol!
+3. Confused on what is on your stack at any given time? Try to draw it out! The TA's can help you find scratch paper if you don't have any.
+
+## Step 7 
+If you have not already, modify your STMxx and LDRyy statements to include the Link Register (LR) so that your program returns to the same place after performing the subroutine/function. You might already have this from the code you modified, but if you don't, just add the LR to the stack when you store the values and pop it when you load them (but only in the STMxx/LDRyy statements in the toupper function). Make sure to update your offset to include the LR. **Take a screenshot showing your progam works with your new Pass by Stack method, as well as your finished code**
+
 
 # Code Given
 main.s (Listing 6-3):
@@ -136,34 +172,3 @@ all: upper
 upper: $(UPPEROBJS)
     ld -o upper $(UPPEROBJS)
 ```
-
-# Explanations
-## Step 3
-Choosing a stack convention is like choosing a starter pokémon. There's really only a few options, but that doesn't mean you won't drastically overthink which one to choose. Here is a quick table with some info (SP stands for Stack Pointer):
-
-| Name | Abbreviation | Example | Why you should choose it |
-|:----:|:------------:|:--------|:-------------------------|
-|Increment Before/<br>Full Ascending|IB|0x200b0: Data1<br>0x200b4: Data2<br>0x200b8: Data3<br>0x200bc: Data4 <-- SP|Counts upwards and always<br> points to the last used data.<br> Best if you like to logically keep<br> track of where everything is.|
-|Increment After/<br>Empty Ascending|IA|0x200b0: Data1<br>0x200b4: Data2<br>0x200b8: Data3<br>0x200bc: Empty <-- SP|Counts upwards, but conceptually<br> starts at 0 instead of 1.<br> Best if you have lots of <br> programming experience.|
-|Decrement Before/<br>Full Descending|DB|0x200b0: Data4 <-- SP<br>0x200b4: Data3<br>0x200b8: Data1<br>0x200bc: Data1|Counts downwards and always<br> points to the last used data.<br> Best for people who like<br> to visualize the stack<br> like a stack of papers.|
-|Decrement After/<br>Empty Descending|DA|0x200b0: Empty <-- SP<br>0x200b4: Data3<br>0x200b8: Data1<br>0x200bc: Data1|Counts downwards and always<br> points to the next avaliable spot.<br> Best for people who don't like<br> any of the other options and<br>just wants to choose one and<br>move on.|
-
-Now, it's important to note that **The Store Sets the Protocol**. However, **your load should always use the opposite protocol**. I just remember this by flipping each letter in the protocol to the other option during the load. So, if you want to use Increment Before, you will use STMIB and LDRDA. If you were using Decrement After, you will use STMDA and LDRIB, etc.
-
-For this step, go replace every `PUSH` command with STMxx (where xx is your protocol), and every `POP` command with LDRyy (where yy is the opposite of your protocol).
-
-
-## Step 6
-To convert your program from a Pass by Register to a Pass by Stack procedure, you need to store the values of `R0` and `R1` on the stack BEFORE you branch to the toupper function. Then, in the toupper function, after you add R4 and R5 to the stack (which you should already be doing from the original code), you need to load the values of R0 and R1 FROM the stack. However, since those values are not on top, you will need to offset the stack pointer by a certain number (positive if you are using a descending protocol and negative if you are using an ascending protocol). You must figure out what this offset is and how to change the stack pointer to get the values you want, while also making sure it ends up where it was before the offset. Before ending the function, you need to push the new value of R0 onto the stack (you can do this after the LDRyy statement that is already at the bottom of the function).
-
-Then, when you return to the main function, you need to load the values of R0 FROM the stack. This should be done before the `MOV R2, R0` command so that the correct value is placed in R2. 
-
-It's easy to get lost in all this pushing and popping, so just let a TA know if you get stuck, and we can come help flush it out!
-
-### Tips
-1. Remember to include the ! after the SP in your STMxx and LDRyy commands. So it should look like `STMxx SP!, {your registers}` and `LDRyy SP!, {your registers}`.
-2. Everything on the stack is stored in sets of 4 bytes. If your stack has 2 values on top of the values you want, then how may bytes will you need to reach over to get the values you want? Remember to account for if you're using a Full or Empty stack protocol!
-3. Confused on what is on your stack at any given time? Try to draw it out! The TA's can help you find scratch paper if you don't have any.
-
-## Step 7
-You might already have this from the code you modified, but if you don't, just add the LR to the stack when you store the values and pop it when you load them (but only in the STMxx/LDRyy statements in the toupper function). **Make sure to update your offset to include the LR.**
