@@ -69,7 +69,7 @@ Update the value for "inFile" (found in the .data section) in `main.s` with the 
 `make` and run the code again. Make sure "upper.txt" contains an all capitalized version of whatever your name/ID from above. **Take a screenshot and include it in your lab report.**
 
 ## Step 13
-Once you are sure the code works, replace the "outFile" value to be the same as your "inFile" value (found in .data of `main.s`). This will <u>update</u> the text you write in the file. Be careful to do this next part correctly, because if you mess it up you will likely need to re-create your text file (which isn't hard, just annoying). `make` the code once again, then *replacing <input-file-name> with your inFile/outFile name in both the following places,* run `cat <input-file-name>; ./upper; cat <input-file-name>`, which is all one line. This should give an output that looks like this:
+Once you are sure the code works, replace the "outFile" value to be the same as your "inFile" value (found in .data of `main.s`). This will <u>update</u> the text you write in the file. Be careful to do this next part correctly, because if you mess it up you will likely need to re-create your text file (which isn't hard, just annoying). `make` the code once again, then *replacing [input-file-name] with your inFile/outFile name in both the following places,* run `cat [input-file-name]; ./upper; cat [input-file-name]`, which is all one line. This should give an output that looks like this:
 
 ```txt
 My name is...
