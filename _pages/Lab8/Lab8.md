@@ -59,9 +59,9 @@ This should have created a new file named "upper.txt" in your directory/folder. 
 ## Step 11
 Create a new text file (text files end with `.txt`) named whatever you like. In the file, write:
 
-My name is <first-name last-name> with student ID <student-ID>
+My name is [first-name last-name> with student ID <student-ID]
 
-Replace <first-name last-name> with your first and last name and <student-ID> with your student ID. I can't believe I have to say that. I will be taking off a large amount of points if you do not do this.
+Replace [first-name last-name] with your first and last name and [student-ID] with your student ID. I can't believe I have to say that. I will be taking off a large amount of points if you do not do this.
 
 Update the value for "inFile" (found in the .data section) in `main.s` with the name of your text file. 
 
