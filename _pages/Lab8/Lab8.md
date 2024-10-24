@@ -1,18 +1,88 @@
 ---
 title: "Lab 8: Macros and System Calls"
 author: Cooper Shapard
-date: 2024-04-01
+date: 2024-10-23
 category: Jekyll
 layout: post
 ---
 
 [Download Lab Instructions](https://www.coopshap.com/ECE1181/pages/Lab8_MacrosSystemCalls.pdf)
 
-I didn't make a lab for this guide because 100% of my time was being used to assist people with Homework 4. Please download the official lab instructions from above and follow those for this lab. I will only be including a Code Given section for copying convenience. If you have any questions or need help, please ask a TA.
-Good news: you really don't need to write any code for this lab. It's just managing a lot of files.
+# Overview
+Lab 8 is centered around understanding Linux system calls and inserting macros in your code. Good news: this lab is the shortest in a while. You don't need to write any code, and its mostly copy/paste and explaining whats happening. Before, you have blindly used system calls (think STDOUT, STDIN, etc) without knowing what happens under the hood. Here, you will become familiar with how the ARM processor executes these commands.
 
-## Code Given
-### Listing 6-4
+## Macros
+Macros are keywords in your code that are replaced with different block of code upon compile time. If you define a macro as `froopy` and it is assigned to the code:
+
+```asm
+MOV R0, #0
+MOV R1, #0
+MOV R2, #0
+```
+
+then every time you write the word `froopy` in your code, it will be replaced by those three lines exactly. This contrasts to subroutines because subroutines are stored in a different place in memory and require branching and linking, while macros follow PC+4 behavior and simply replace code upon compilation.
+
+## System Calls
+Remember seeing `SVC 0` in your code a lot? This is a special command that executes a "system call," which is a pre-defined operation executed by the ARM processor. Think of it like a macro you don't have to write yourself. The parameters for these system calls are placed in registers R0-R6. The system can also return a value into the R0 register upon completiton.
+
+# Explanations
+## Step 1
+Read through pages 125-130 in the book (Chapter 6: "Macros" header to the end of the chapter for those without page numbers). Create 2 files, `mainmacro.s` and `uppermacro.s`, from Listing 6-7 and Listing 6-8 below in the [code given section](#code-given). Please use the code from this website, as there are funcitonal problems from the listings in the book.
+
+## Step 2
+Use your makefile from the previous lab and change every instance of the word `main` to `mainmacro` and the word `upper` to `uppermacro`.
+
+## Step 3
+Run the program and make sure the two strings are uppercase. **Take a screenshot and include it in your lab report.**
+
+## Step 4
+Check your `mainmacro.s` file and notice the new command `toupper` that appears a few times. This is a macro (defined in `uppermacro.s`) that is replaced by code that converts a string to uppercase from the given inputs. The command is replaced with the code in `uppermacro.s`'s .MACRO toupper section. To show this, run `objdump -d uppermacro` and find 2 places in code where the "toupper" command is replaced by new code (you should be able to see identical code in two separate places in your program). **Take a screenshot and annotate it to show two places where the macro was replaced in your program and include it in your lab report.**
+
+## Step 5
+No action required for this step. It simply says that we will work with system calls in the next few steps.
+
+## Step 6
+You will now update the code so that it takes a filename as input and output and changes the entire file to uppercase and stores it in the output file. To do this, create a file, `upper.s` (you may have a file of identical name from the last lab. Replace that code with this code) and fill it with Listing 6-4 below in the [code given section](#code-given).
+
+## Step 7
+Create `fileio.s` from Listing 7-1 and `main.s` (you may have a file of identical name from previous labs. Replace that code with this code) from Listing 7-2 below. Use the code on this website, as the code in the book has functional problems on the Red Pitaya.
+
+## Step 8
+Create one more file called `unistd.s` from Appendix B in the book. This is a couple hundred lines, so I would suggest copying it from below. You can also download the file from [here](https://raw.githubusercontent.com/Apress/Raspberry-Pi-Assembly-Language-Programming/master/Source%20Code/Chapter%207/unistd.s) if you prefer.
+
+## Step 9
+Create a makefile from Listing 7-3 below. Don't forget to change the spaces before `as` and `ld` to tabs. `make` the file and run it with `./upper`.
+
+## Step 10
+This should have created a new file named "upper.txt" in your directory/folder. Check the file and make sure it contains a copy of "main.s" but in all capital letters. **Take a screenshot and include it in your lab report.**
+
+## Step 11
+Create a new text file (text files end with `.txt`) named whatever you like. In the file, write:
+
+My name is <first-name last-name> with student ID <student-ID>
+
+Replace <first-name last-name> with your first and last name and <student-ID> with your student ID. I can't believe I have to say that. I will be taking off a large amount of points if you do not do this.
+
+Update the value for "inFile" (found in the .data section) in `main.s` with the name of your text file. 
+
+## Step 12
+`make` and run the code again. Make sure "upper.txt" contains an all capitalized version of whatever your name/ID from above. **Take a screenshot and include it in your lab report.**
+
+## Step 13
+Once you are sure the code works, replace the "outFile" value to be the same as your "inFile" value (found in .data of `main.s`). This will <u>update</u> the text you write in the file. Be careful to do this next part correctly, because if you mess it up you will likely need to re-create your text file (which isn't hard, just annoying). `make` the code once again, then *replacing <input-file-name> with your inFile/outFile name in both the following places,* run `cat <input-file-name>; ./upper; cat <input-file-name>`, which is all one line. This should give an output that looks like this:
+
+```txt
+My name is...
+MY NAME IS...
+```
+
+If both the outputs are all capital, you will need to re-create your .txt file to be lowercase, then try again.
+
+## Step 14
+**Take a screenshot of this and include it in your report.**
+
+# Code Given
+## Listing 6-4
 ```asm
 @
 @ Assembler program to convert a string to
@@ -47,7 +117,7 @@ cont:                   @ end if
     POP {R4-R5}         @ Restore the register we use.
     BX LR               @ Return to caller
 ```
-### Listing 6-7
+## Listing 6-7
 ```asm
 @
 @ Assembler program to convert a string to
@@ -91,7 +161,7 @@ _start:
     buffer: .fill 255, 1, 0
 
 ```
-### Modified Listing 6-8
+## Listing 6-8
 ```asm
 @ 
 @ Assembler program to convert a string to 
@@ -129,7 +199,7 @@ _start:
     SUB R0, R1, R2          @ get the length by subtracting the pointers 
 .ENDM
 ```
-### Modified Listing 7-1
+## Listing 7-1
 ```asm
 @ Various macros to perform file I/O  
 @ The fd parameter needs to be a register.  
@@ -178,7 +248,7 @@ _start:
 .endm
 
 ```
-### Listing 7-2
+## Listing 7-2
 ```asm
 @
 @ Assembler program to convert a string to
@@ -243,7 +313,7 @@ exit:
     outErr: .asciz "Failed to open output file.\n"
     outErrsz: .word .-outErr
 ```
-### Listing 7-3 (Don't forget to change spaces to tabs)
+## Listing 7-3 (Don't forget to change spaces to tabs)
 ```asm
 UPPEROBJS = main.o upper.o
 ifdef DEBUG
@@ -260,8 +330,7 @@ all: upper
 upper: $(UPPEROBJS)
     ld -o upper $(UPPEROBJS)
 ```
-### unistd.s
-Copy here or download from [here](https://raw.githubusercontent.com/Apress/Raspberry-Pi-Assembly-Language-Programming/master/Source%20Code/Chapter%207/unistd.s)
+## unistd.s
 ```asm
 @
 @ Defines for the Linux system calls.
