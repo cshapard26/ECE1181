@@ -6,7 +6,7 @@ category: Jekyll
 layout: post
 ---
 
-[Download Lab Instructions](https://www.coopshap.com/ECE1181/pages/Lab8_MacrosSystemCalls.pdf)
+[Download Lab Instructions](/ECE1181/pages/Lab8/Lab8_MacrosSystemCalls.pdf)
 
 # Overview
 Lab 8 is centered around understanding Linux system calls and inserting macros in your code. Good news: this lab is the shortest in a while. You don't need to write any code, and its mostly copy/paste and explaining whats happening. Before, you have blindly used system calls (think STDOUT, STDIN, etc) without knowing what happens under the hood. Here, you will become familiar with how the ARM processor executes these commands.

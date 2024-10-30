@@ -6,7 +6,7 @@ category: Jekyll
 layout: post
 ---
 
-[Download Lab Instructions](https://www.coopshap.com/ECE1181/pages/Lab7_FunctionsStack.pdf)
+[Download Lab Instructions](/ECE1181/pages/Lab7/Lab7_FunctionsStack.pdf)
 
 # Overview
 Welcome to Lab 7. Here, you will learn how to use subroutines, a.k.a. functions, to avoid rewriting code multiple times. **This may be one of the most valuable/useful concepts you learn relating to ARM Assembly.** Functions can take multiple inputs and return multiple outputs and can be called multiple times from anywhere in your code. However, there are a couple different ways that you can send and receive data to and from a function. They are:
