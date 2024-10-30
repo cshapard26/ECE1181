@@ -36,7 +36,7 @@ Read through pages 145-147 of Chapter 8 (beginning of Chapter to "Flashing LEDs"
 
 ## Step 5
 Run the following commands to activate the lights from your red pitaya. You will need to do this every time you connect to your pitaya:
-```
+```asm
 echo 968 > /sys/class/gpio/export
 echo out > /sys/class/gpio/gpio968/direction
 echo 1 > /sys/class/gpio/gpio968/value
@@ -251,7 +251,7 @@ high: .asciz "1"
 ```
 
 ## makefile (Change the 4 spaces between "as" and "ld" to tabs. I will just stare at you awkwardly if you don't do this and say the makefile isn't working):
-```
+```asm
 OBJS = main.o
 
 ifdef DEBUG
