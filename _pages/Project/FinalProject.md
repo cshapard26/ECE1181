@@ -30,7 +30,7 @@ See the catalogue below for avaliable projects. Many of these come from last sem
 For any questions regarding the scoring on this assignment, please ask TA Cooper.
 
 # Projects
-16 project prompts sorted by credit value. A star `*` means that the project was part of the original Homework 4 (some are simplified for this project).
+16 project prompts sorted by credit value. A star `*` means that the project was part of the original Homework 4 (some are simplified for this project). I will fill out descriptions for all of these by next week.
 
 ---
 
