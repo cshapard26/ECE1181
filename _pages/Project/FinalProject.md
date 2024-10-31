@@ -9,6 +9,8 @@ layout: post
 # Overview
 Welcome to the Final Project. Here, you will tie all of the topics you learned in this class together to create a couple different programs of your choosing.
 
+**THIS IS A DRAFT PAGE. ALL INFORMATION IS SUBJECT TO CHANGE.**
+
 # Grading
 How this assignment will work is as follows. Below are a list of projects with assigned credits. You must choose projects that add to at least ten (10) credits. More complex projects with be rewarded with more credits. **These credits are NOT your final score on the assignment.** Your assignment will be graded like any other lab report based on explanations, code accuracy, and successful completion of each project. Each project must have a brief (2-4 sentence) overview, text or a screenshot of all code you used, a screenshot with at least 3 unit tests to show your code works, and an explanation of how your program works in your own words. **You also must include your name and student ID commented somewhere in your code to receive full credit.**
 
