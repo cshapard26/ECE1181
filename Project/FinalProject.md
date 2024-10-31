@@ -14,7 +14,7 @@ How this assignment will work is as follows. Below are a list of projects with a
 
 However, your grade will be weighted based on the total number of credits for the projects you choose. For example, if you only complete nine credits, then you can only receive a maximum score of 90% on the assignment. You are allowed to earn extra credit up to a 120% on the assignment (by doing at least 12 credits worth of projects). Anything over 120% is solely for your own practice and will not be counted for your final grade.
 
-Consider this score on a student's assignment:
+Consider these example scores for a student who chose to do 4 projects:
 
 - Project 1 (3 credits): 100%
 - Project 2 (4 credits): 90%
