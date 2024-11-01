@@ -64,7 +64,7 @@ Create a fresh makefile with the code in the [code given section](#code-given).
 ## Step 9
 In "gpiomacros.s" file's `.data` section, change the "timespecsec" value to add one second between each light flash. I cannot remember whether this is in seconds or nanoseconds, so if you're the first one here, let me know and I'll update the info for other students.
 
-Run `make -B` to force the program to re-make with your new code. Run `sudo ./main` and check to make sure you can see the lights changing slowly on your breadboard.
+Run `make -B` to force the program to re-make with your new code. Run `./main` and check to make sure you can see the lights changing slowly on your breadboard.
 
 ## Step 10
 Now, modify main.s to display the value of R6 in binary on the LEDs. So the first LED is 2^0, the second is 2^1, the third is 2^2. R6 should start from 7 and count down to 0.
