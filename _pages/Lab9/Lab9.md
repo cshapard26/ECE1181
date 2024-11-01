@@ -95,7 +95,7 @@ WARNING: To date, nobody has been able to get this working (or: nobody has put i
 
 .macro nanoSleep
     ldr r0, =timespecsec
-    ldr r1, =timespecsec
+    ldr r1, =timespecnano
     mov r7, #sys_nanosleep
     svc 0
 .endm
@@ -103,7 +103,7 @@ WARNING: To date, nobody has been able to get this working (or: nobody has put i
 .macro GPIOExport pin
     openFile gpioexp, O_WRONLY
     mov r8, r0                  @ save the file desc
-    writeFile r8, \pin, #2
+    writeFile r8, \pin, #3
     flushClose r8
 .endm
 
@@ -139,6 +139,7 @@ WARNING: To date, nobody has been able to get this working (or: nobody has put i
 
 .data
 timespecsec: .word 0
+timespecnano: .word 100000000
 gpioexp: .asciz "/sys/class/gpio/export"
 gpiopinfile: .asciz "/sys/class/gpio/gpioxxx/direction"
 gpiovaluefile: .asciz "/sys/class/gpio/gpioxxx/value"
@@ -191,9 +192,9 @@ _end:
     svc 0 @ Linux command to terminate
 
 .data
-pin970: .asciz "968"
+pin970: .asciz "970"
 pin969: .asciz "969"
-pin968: .asciz "970"
+pin968: .asciz "968"
 low: .asciz "0"
 high: .asciz "1"
 ```
