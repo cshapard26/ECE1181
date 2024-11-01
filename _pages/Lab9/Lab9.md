@@ -59,7 +59,7 @@ Read through pages 148-152 in the book ("Flashing LEDs" to "Moving Closer to the
 Create a fresh makefile with the code in the [code given section](#code-given).
 
 ## Step 8
-`make` your file and run `sudo ./main` (you may need to enter the password, "root", to run this command). You should see a change in the lights on your board. It may happen very quickly.
+`make` your file and run `./main` (you may need to enter the password, "root", to run this command). You should see a change in the lights on your board. It may happen very quickly.
 
 ## Step 9
 In "gpiomacros.s" file's `.data` section, change the "timespecsec" value to add one second between each light flash. I cannot remember whether this is in seconds or nanoseconds, so if you're the first one here, let me know and I'll update the info for other students.
