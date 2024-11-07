@@ -106,7 +106,7 @@ Implement a macro that divides two numbers. It should return the whole-number qu
 
 ## Bubble Sort (3 Credits)*
 You are given a randomized series of numbers, which can be found [here](/ECE1181/pages/Project/BubbleSort). Write a program that sorts the numbers using the bubble sort algoritm. You can check that you program works using the debugger to view memory, where the sorted elements should be stored. Here is a C version of the algorithm to use as pseudocode:
-```c
+```
 last = num;
 while (last > 0) {
     pairs = last – 1;
