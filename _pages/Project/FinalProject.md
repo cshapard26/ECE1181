@@ -85,11 +85,11 @@ Output: (gdb) value in R6 is 0x58980, or 362880 in decimal
 ## Caesar Cipher (2 Credits)
 Write a program that takes a string and a number as inputs (one after the other) and shifts all letters by the given amount. This creates a classic Caesar Cipher. You can assume that the input is always lowercase and alphabetic and that the number is always a single-digit positive integer. Examples:
 
-Input: "cooper
+Input: "cooper<br>
         2      "<br>
 Output: "eqqrgt"
 
-Input: "a secret message
+Input: "a secret message<br>
         9                "<br>
 Output: "j bnlanc vnbbjpn"
 
