@@ -29,9 +29,7 @@ See the catalogue below for avaliable projects. Many of these come from last sem
 For any questions regarding the scoring on this assignment, please ask TA Cooper.
 
 # Projects
-16 project prompts/ideas sorted by credit value. A star `*` means that the project was part of the original Homework 4 (most are simplified for this project). You can also propose your own project, seen at the bottom.
-
-Feel free to use code from previous labs (all are avaliable on the website), collaborate (each person must submit their own assignment), and ask a TA if you need assistance or clarification.
+16 project prompts/ideas sorted by credit value. A star `*` means that the project was part of the original Homework 4 (most are simplified for this project). You can also propose your own project, seen at the bottom. Feel free to use code from previous labs (all are avaliable on the website), collaborate (each person must submit their own assignment), and ask a TA if you need assistance or clarification.
 
 ---
 
@@ -51,7 +49,7 @@ Input: "my favorite vowel is o."<br>
 Output: "me feverete vewel es e."
 
 Input: "care to explain how you came up with this idea?"<br>
-Output: "cere te expleen hew yee ceme ep weth thes edee?"
+Output: "cere te expleen hew eee ceme ep weth thes edee?"
 
 ## Rename a File (1 Credits)
 Write a program that takes 2 file names as input (one after the other). It should take all the text from the first file and move it to a new file with the second file's name. Basically, you are making a copy of a file, but with a different name. You do not need to delete the original.
