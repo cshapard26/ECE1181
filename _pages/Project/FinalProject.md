@@ -107,14 +107,34 @@ Change the code from Lab 9 to support up to 5 lights. The code must be algorithm
 Implement a macro that divides two numbers. It should return the whole-number quotient in R6 and the remainder (% or Modulus) in R7. You cannot use the division commands or functions already present in ARM. You do not need to take input or output from the terminal. The code should work by hard-coding 2 numbers into R0 and R1 which are your dividend and divisor, respectively. You can view the output in the debugger.
 
 ## Bubble Sort (3 Credits)*
-Not a dictionary
+You are given a randomized series of numbers. Write a program that sorts the numbers using the bubble sort algoritm. You can check that you program works using the debugger to view memory, where the sorted elements should be stored. Here is a C version of the algorithm to use as pseudocode:
+```c
+last = num;
+while (last > 0) {
+    pairs = last – 1;
+    for (j = 0; j <= pairs; j++) {
+        if (entry[j] > entry [j+1]) {
+            temp = entry[j];
+            entry[j] = entry[j+1];
+            entry[j+1] = temp;
+            last = j;
+        }
+    }
+}
+```
 
 ---
 
 ## 64-bit Multiplication (4 Credits)
-Create a macro that expands ARM's 32-bit multiplication to allow an answer of up to 64 bits. It should return the product split between 2 registers.
+Create a macro that expands ARM's 32-bit multiplication to allow an answer of up to 64 bits. It should return the product split between 2 registers (as in, R6 has bits 63-32 and R7 has bits 31-0). You do not need to take input or output from the terminal. You can view the output in the debugger.
 
 ## Text-based Video Game (4 Credits)
+Create a text-based video game in ARM. The game should have the following minimum criterion:
+- A nameable character whose name appears in at least 2 different spots within the game
+- At least 6 Y/N or choice-based decisions/actions.
+- A health system (does not have to be fighting health, could be a strike system for making mistakes)
+- 
+
 Must have at least 2 levels and nameable character who's name appears at least 2 times in the game
 
 ---
