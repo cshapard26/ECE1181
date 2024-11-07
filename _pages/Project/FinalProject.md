@@ -131,36 +131,42 @@ Create a macro that expands ARM's 32-bit multiplication to allow an answer of up
 ## Text-based Video Game (4 Credits)
 Create a text-based video game in ARM. The game should have the following minimum criterion:
 - A nameable character whose name appears in at least 2 different spots within the game
-- At least 6 Y/N or choice-based decisions/actions.
-- A health system (does not have to be fighting health, could be a strike system for making mistakes)
-- 
-
-Must have at least 2 levels and nameable character who's name appears at least 2 times in the game
+- At least 6 Y/N or choice-based decisions/actions. Actions must have a meaningful effect on gameplay
+- A health system (does not have to be fighting health, could be a strike system for making mistakes, etc.)
+- The ability to quit the game from within the game (as in, end the program without needing to Ctrl+C).
 
 ---
 
 ## Decimal to Ascii Coverter (5 Credits)
-Input: "1234"
-Memory: 1234
-Output: "1234"
+This is a big one. For all the other projects that say "you don't need to print this to the terminal, just show it in the debugger", they say that because ascii and decimal don't blend well and you can't stdout/print a decimal number without converting to ascii. Your goal is to write a program/macro that takes numeric ASCII input from the terminal and converts it into an integer/number to be stored in memory. It then must be able to turn the number into an ASCII representation of the decimal interpretation of the number and print it out. You cannot take each digit as a separate input ("1 2 3 4"). It has to be continuous ("1234").
+
+Thus, you should have this process:
+- Input: "1234"
+- Memory: 1234 or 0x4d2
+- Output: "1234"
+
+To prove your program works, input a 5 digit number, LSL it by 2 bits, and then print out the resulting number to the terminal. Examples:
+
+Input: "39082"<br>
+In Memory: 0x98aa
+
+Output: "156328"
+
+Input: "1213141"<br>
+In Memory: 0x1282d5
+
+Output: "4852564"
 
 ## Happy Birthday (5 Credits)
-Play the song Happy Birthday on the breadboard using code from the Red Pitaya. Supplies avaliable upon request
+Play the song Happy Birthday on the breadboard using code from the Red Pitaya. Supplies avaliable upon request.
 
 ---
 
 ## Push Button Lights (8 Credits)
-Get the push button counter from Lab 9 to work
+Get the push button counter from Lab 9 to work.
 
 ---
 
-## Create your own! (1 - 5 Credits)
-Propose your idea and have it credited by TA Cooper! One (1) max per person.
-
-
-
-
-
-
-
+## Create your own! (1 - 8 Credits)
+Propose your idea and have it credited by TA Cooper!
 
