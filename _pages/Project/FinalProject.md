@@ -9,7 +9,6 @@ layout: post
 # Overview
 Welcome to the Final Project. Here, you will tie all of the topics you learned in this class together to create a couple different programs of your choosing.
 
-**THIS IS A DRAFT PAGE. ALL INFORMATION IS SUBJECT TO CHANGE.**
 
 # Grading
 How this assignment will work is as follows. Below are a list of projects with assigned credits. You must choose projects that add to at least ten (10) credits. More complex projects with be rewarded with more credits. **These credits are NOT your final score on the assignment.** Your assignment will be graded like any other lab report based on explanations, code accuracy, and successful completion of each project. Each project must have a brief (2-4 sentence) overview, text or a screenshot of all code you used, a screenshot with at least 3 unit tests to show your code works, and an explanation of how your program works in your own words. **You also must include your name and student ID commented somewhere in your code to receive full credit.**
@@ -30,26 +29,49 @@ See the catalogue below for avaliable projects. Many of these come from last sem
 For any questions regarding the scoring on this assignment, please ask TA Cooper.
 
 # Projects
-16 project prompts sorted by credit value. A star `*` means that the project was part of the original Homework 4 (some are simplified for this project). I will fill out descriptions for all of these by next week.
+16 project prompts/ideas sorted by credit value. A star `*` means that the project was part of the original Homework 4 (most are simplified for this project). You can also propose your own project, seen at the bottom.
+
+Feel free to use code from previous labs (all are avaliable on the website), collaborate (each person must submit their own assignment), and ask a TA if you need assistance or clarification.
 
 ---
 
 ## Sarcasm Generator (1 Credits)
-hello there -> HeLlO tHeRe
+Write a program that takes a string input from the terminal and switches between capital and lowercase for every letter. Punctuation should stay the same. Examples:
+
+Input: "hello there"<br>
+Output: "HeLlO tHeRe"
+
+Input: "i'm so EXCITED for this project!"<br>
+Output: "I'm So ExCiTeD fOr ThIs PrOjEcT!"
 
 ## Epples and Benenes (1 Credit)
-Convert all vowels in an input into the letter E, the most common letter
+Do you know what the problem with vowels is? There's too many of them. Write a program that converts all vowels in an input into the letter "e", the best vowel. You can assume an all-lowercase input and that "y" is always a vowel. Examples:
+
+Input: "my favorite vowel is o."<br>
+Output: "me feverete vewel es e."
+
+Input: "care to explain how you came up with this idea?"<br>
+Output: "cere te expleen hew yee ceme ep weth thes edee?"
 
 ## Rename a File (1 Credits)
-Same content into a different name (don't need to delete original)
+Write a program that takes 2 file names as input (one after the other). It should take all the text from the first file and move it to a new file with the second file's name. Basically, you are making a copy of a file, but with a different name. You do not need to delete the original.
 
 ---
 
 ## Upgraded Sine Look Up Table (2 Credits)*
-90 -> 180
+Convert the Sine Lookup Table from Example 12.1 in your book from 90 degrees to 180 degrees. This can be done by strategically *reducing* the amount of code from the code given. You can find working copies/gode-given of Example 12.1 and an updated sine table [here](/ECE1181/pages/Project/SineLookup.md).
 
 ## Palindrome Identifier (2 Credits)
-Output Yes or No
+Write a program that takes an input from the terminal and outputs whether the entered word is a palindrome (spelled the same way forward and backwards). You can assume that the input is always alphabetic and lowercase. Examples:
+
+Input: "racecar"<br>
+Output: "Palindrome" or "True" or "1" (any of these work)
+
+Input: "cooper"<br>
+Output: "Not a Palindrome" or "False" or "0" (any of these work)
+
+Input: "palindromeemordnilap"<br>
+Output: "Palindrome" or "True" or "1" (any of these work)
 
 ## Binary Search (2 Credits)*
 Pre-sorted dictionary given
