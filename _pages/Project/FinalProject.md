@@ -99,7 +99,7 @@ You are given a pre-sorted list of elements. Write a program that uses binary se
 
 
 ## Blinking Lights v2.0 (3 Credits)
-Change the code from Lab 9 to support up to 5 lights. The code must be algorithmic (you cannot hard code each number). In theory, your program should be able to support up to 32 lights with very few changes. You only need to use up to 5 lights as a test. More supplies are avaliable upon request.
+Change the code from Lab 9 to support up to 5 lights. The code must be algorithmic (you cannot hard code each number). In theory, your program should be able to support up to 32 lights with very few changes. More supplies are avaliable upon request.
 
 ## Division/Modulus Operator (3 Credits)
 Implement a macro that divides two numbers. It should return the whole-number quotient in R6 and the remainder (% or Modulus) in R7. You cannot use the division commands or functions already present in ARM. You do not need to take input or output from the terminal. The code should work by hard-coding 2 numbers into R0 and R1 which are your dividend and divisor, respectively. You can view the output in the debugger.
