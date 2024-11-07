@@ -1,3 +1,10 @@
+---
+title: "Sine Lookup"
+author: Cooper Shapard
+date: 2024-11-07
+category: Jekyll
+layout: post
+---
 
 
 Here is the sine lookup table from Example 12.1 of the book, modified to work with your Red Pitaya:

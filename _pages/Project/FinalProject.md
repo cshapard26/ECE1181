@@ -1,7 +1,7 @@
 ---
 title: "Final Project: Tying it All Together"
 author: Cooper Shapard
-date: 2024-10-30
+date: 2024-11-07
 category: Jekyll
 layout: post
 ---
@@ -73,22 +73,38 @@ Output: "Not a Palindrome" or "False" or "0" (any of these work)
 Input: "palindromeemordnilap"<br>
 Output: "Palindrome" or "True" or "1" (any of these work)
 
-## Binary Search (2 Credits)*
-Pre-sorted dictionary given
 
-## Ceasar Cipher (2 Credits)
-assume all lowercase inputs
+## Factorial Calculator (2 Credits)*
+Write a program that takes a 1 digit number as input from the terminal and calculates the factorial (!). Remember that a factorial, n!, is calculated as (n * n-1 * n-2 ... * 2 * 1). This should be done through a loop and not brute forced. Note that there is a multiplication command in ARM (it is MUL, and you use it just like an ADD or SUB). Though the input needs to be from the terminal, you can view the output in the debugger. Examples:
+
+Input: "5"<br>
+Output: (gdb) value in R6 is 0x78, or 120 in decimal
+
+Input: "9"<br>
+Output: (gdb) value in R6 is 0x58980, or 362880 in decimal
+
+
+## Caesar Cipher (2 Credits)
+Write a program that takes a string and a number as inputs (one after the other) and shifts all letters by the given amount. This creates a classic Caesar Cipher. You can assume that the input is always lowercase and alphabetic and that the number is always a single-digit positive integer. Examples:
+
+Input: "cooper
+        2      "<br>
+Output: "eqqrgt"
+
+Input: "a secret message
+        9                "<br>
+Output: "j bnlanc vnbbjpn"
 
 ---
+## Binary Search (3 Credits)*
+You are given a pre-sorted list of elements. Write a program that uses binary search to find a given element. You do not need to take input from the terminal (all searching can be hard coded and shown in the debugger). You can find the sorted list/code given [here](/ECE1181/pages/Project/BinarySearch.md)
 
-## Factorial Calculator (3 Credits)*
-Write a program that takes a 1 digit number as input from the terminal and calculates the factorial
 
 ## Blinking Lights v2.0 (3 Credits)
-Change the code to support up to 5 lights. Must be algorithmic (not hard coded)
+Change the code from Lab 9 to support up to 5 lights. The code must be algorithmic (you cannot hard code each number). In theory, your program should be able to support up to 32 lights with very few changes. You only need to use up to 5 lights as a test. More supplies are avaliable upon request.
 
-## Modulus Operator (3 Credits)
-Implement a macro that finds the Modulus (%) of two inputs and returns the R in R0 and the Q in R1.
+## Division/Modulus Operator (3 Credits)
+Implement a macro that divides two numbers. It should return the whole-number quotient in R6 and the remainder (% or Modulus) in R7. You cannot use the division commands or functions already present in ARM. You do not need to take input or output from the terminal. The code should work by hard-coding 2 numbers into R0 and R1 which are your dividend and divisor, respectively. You can view the output in the debugger.
 
 ## Bubble Sort (3 Credits)*
 Not a dictionary
