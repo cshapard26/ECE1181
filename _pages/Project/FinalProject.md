@@ -57,7 +57,7 @@ Write a program that takes 2 file names as input (one after the other). It shoul
 ---
 
 ## Upgraded Sine Look Up Table (2 Credits)*
-Convert the Sine Lookup Table from Example 12.1 in your book from 90 degrees to 180 degrees. This can be done by strategically *reducing* the amount of code from the code given. You can find working copies/gode-given of Example 12.1 and an updated sine table [here](/ECE1181/pages/Project/SineLookup.md).
+Convert the Sine Lookup Table from Example 12.1 in your book from 90 degrees to 180 degrees. This can be done by strategically *reducing* the amount of code from the code given. You can find working copies/gode-given of Example 12.1 and an updated sine table [here](/ECE1181/pages/Project/SineLookup).
 
 ## Palindrome Identifier (2 Credits)
 Write a program that takes an input from the terminal and outputs whether the entered word is a palindrome (spelled the same way forward and backwards). You can assume that the input is always alphabetic and lowercase. Examples:
@@ -95,7 +95,7 @@ Output: "j bnlanc vnbbjpn"
 
 ---
 ## Binary Search (3 Credits)*
-You are given a pre-sorted list of elements. Write a program that uses binary search to find a given element. You do not need to take input from the terminal (all searching can be hard coded and shown in the debugger). You can find the sorted list/code given [here](/ECE1181/pages/Project/BinarySearch.md)
+You are given a pre-sorted list of elements. Write a program that uses binary search to find a given element. You do not need to take input from the terminal (all searching can be hard coded and shown in the debugger). You can find the sorted list/code given [here](/ECE1181/pages/Project/BinarySearch)
 
 
 ## Blinking Lights v2.0 (3 Credits)
@@ -105,7 +105,7 @@ Change the code from Lab 9 to support up to 5 lights. The code must be algorithm
 Implement a macro that divides two numbers. It should return the whole-number quotient in R6 and the remainder (% or Modulus) in R7. You cannot use the division commands or functions already present in ARM. You do not need to take input or output from the terminal. The code should work by hard-coding 2 numbers into R0 and R1 which are your dividend and divisor, respectively. You can view the output in the debugger.
 
 ## Bubble Sort (3 Credits)*
-You are given a randomized series of numbers. Write a program that sorts the numbers using the bubble sort algoritm. You can check that you program works using the debugger to view memory, where the sorted elements should be stored. Here is a C version of the algorithm to use as pseudocode:
+You are given a randomized series of numbers, which can be found [here](/ECE1181/pages/Project/BubbleSort). Write a program that sorts the numbers using the bubble sort algoritm. You can check that you program works using the debugger to view memory, where the sorted elements should be stored. Here is a C version of the algorithm to use as pseudocode:
 ```c
 last = num;
 while (last > 0) {
